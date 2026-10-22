@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAESOUL | 日常穿搭與飾品</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      color: #302a2c;
+      background: #fffafb;
+    }
+    header {
+      padding: 22px 18px;
+      text-align: center;
+      background: #f9e8ec;
+    }
+    header h1 {
+      margin: 0;
+      letter-spacing: 5px;
+      font-size: 28px;
+    }
+    header p { font-size: 12px; letter-spacing: 2px; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 14px;
+      background: white;
+    }
+    nav a { color: #514247; text-decoration: none; font-size: 14px; }
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: #f5edef;
+    }
+    .hero h2 { font-size: 30px; letter-spacing: 2px; }
+    .hero p { line-height: 1.9; color: #75676c; }
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 28px;
+      background: #302a2c;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    section { padding: 35px 18px; text-align: center; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 700px;
+      margin: 25px auto;
+    }
+    .product {
+      padding: 24px 10px;
+      background: #f8eef0;
+    }
+    .product h3 { font-size: 16px; }
+    .product p { font-size: 13px; color: #75676c; }
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #f9e8ec;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CHAESOUL</h1>
+    <p>YOUR STYLE, YOUR SOUL.</p>
+  </header>
+
+  <nav>
+    <a href="#about">品牌介紹</a>
+    <a href="#shop">商品分類</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Find Your Everyday Style.</h2>
+    <p>把喜歡的風格，穿進每一天。<br>
+    日常穿搭・質感飾品・情侶穿搭</p>
+    <a class="button" href="#shop">探索商品</a>
+  </div>
+
+  <section id="about">
+    <h2>ABOUT CHAESOUL</h2>
+    <p>讓好看與質感，成為日常的一部分。</p>
+  </section>
+
+  <section id="shop">
+    <h2>SHOP BY CATEGORY</h2>
+    <div class="products">
+      <div class="product">
+        <h3>服飾穿搭</h3>
+        <p>DAILY OUTFITS</p>
+      </div>
+      <div class="product">
+        <h3>質感飾品</h3>
+        <p>DAILY JEWELRY</p>
+      </div>
+      <div class="product">
+        <h3>情侶穿搭</h3>
+        <p>COUPLE LOOKS</p>
+      </div>
+      <div class="product">
+        <h3>925 純銀</h3>
+        <p>925 STERLING SILVER</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>FOLLOW US</h2>
+    <p>追蹤 CHAESOUL，掌握新品與活動資訊。</p>
+    <a class="button" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </section>
+
+  <footer>
+    © CHAESOUL. All Rights Reserved.
+  </footer>
+</body>
+</html>
