@@ -19,9 +19,13 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -82,7 +86,9 @@
       font-size: 12px;
     }
 
-    nav a:hover { color: #ad7789; }
+    nav a:hover {
+      color: #ad7789;
+    }
 
     .hero {
       min-height: 460px;
@@ -100,7 +106,9 @@
         center 42% / cover;
     }
 
-    .hero-content { max-width: 480px; }
+    .hero-content {
+      max-width: 480px;
+    }
 
     .eyebrow {
       color: var(--muted);
@@ -131,6 +139,7 @@
       letter-spacing: 1px;
       text-align: center;
       transition: .2s;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -164,7 +173,9 @@
       letter-spacing: 1px;
     }
 
-    section { padding: 65px 6%; }
+    section {
+      padding: 65px 6%;
+    }
 
     .section-heading {
       margin-bottom: 32px;
@@ -190,33 +201,50 @@
       margin: auto;
     }
 
-    .category { text-align: center; }
+    .category {
+      min-width: 0;
+      text-align: center;
+    }
 
-    .category img {
+    /* 整個商品卡片都是連結 */
+    .category-link {
+      display: block;
+      width: 100%;
+      color: inherit;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .category-link img {
       aspect-ratio: 4 / 5;
       transition: opacity .25s;
     }
 
-    .category:hover img { opacity: .82; }
+    .category-link:hover img {
+      opacity: .82;
+    }
 
-    .category h3 {
+    .category-link h3 {
       margin: 17px 0 5px;
       font-size: 15px;
     }
 
-    .category p {
+    .category-link p {
       margin: 0 0 15px;
       color: var(--muted);
       font-size: 10px;
       letter-spacing: 2px;
     }
 
-    .category .button {
+    .category-link .button {
+      display: block;
       width: 100%;
       padding: 12px 5px;
     }
 
-    .featured { background: #f7ecef; }
+    .featured {
+      background: #f7ecef;
+    }
 
     .feature-box {
       max-width: 950px;
@@ -227,7 +255,9 @@
       gap: 40px;
     }
 
-    .feature-box img { aspect-ratio: 4 / 3; }
+    .feature-box img {
+      aspect-ratio: 4 / 3;
+    }
 
     .feature-copy h2 {
       font-size: 32px;
@@ -239,6 +269,10 @@
       color: #6e6267;
       font-size: 13px;
       line-height: 2;
+    }
+
+    .feature-copy .button {
+      margin: 0 5px 8px 0;
     }
 
     .social {
@@ -266,7 +300,9 @@
       text-align: center;
     }
 
-    footer .logo { font-size: 19px; }
+    footer .logo {
+      font-size: 19px;
+    }
 
     footer p {
       color: #d5cdd0;
@@ -274,7 +310,9 @@
       line-height: 1.9;
     }
 
-    footer a { text-decoration: underline; }
+    footer a {
+      text-decoration: underline;
+    }
 
     @media (max-width: 650px) {
       header {
@@ -295,22 +333,32 @@
         background-position: 58% center;
       }
 
-      .hero-content { max-width: 300px; }
+      .hero-content {
+        max-width: 300px;
+      }
 
-      .hero p { font-size: 12px; }
+      .hero p {
+        font-size: 12px;
+      }
 
-      section { padding: 48px 5%; }
+      section {
+        padding: 48px 5%;
+      }
 
-      .categories { gap: 10px; }
+      .categories {
+        gap: 10px;
+      }
 
-      .category h3 { font-size: 13px; }
+      .category-link h3 {
+        font-size: 13px;
+      }
 
-      .category p {
+      .category-link p {
         font-size: 9px;
         letter-spacing: 1px;
       }
 
-      .category .button {
+      .category-link .button {
         padding: 11px 3px;
         font-size: 9px;
       }
@@ -320,9 +368,13 @@
         gap: 24px;
       }
 
-      .feature-copy h2 { font-size: 27px; }
+      .feature-copy h2 {
+        font-size: 27px;
+      }
 
-      .benefits div { font-size: 9px; }
+      .benefits div {
+        font-size: 9px;
+      }
     }
   </style>
 </head>
@@ -363,7 +415,7 @@
         <a class="button"
            href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
            target="_blank" rel="noopener noreferrer">
-          SHOP NOW · 立即購物
+          SHOP NOW · 立即購物 ↗
         </a>
       </div>
     </section>
@@ -382,59 +434,64 @@
       </div>
 
       <div class="categories">
+
+        <!-- 服飾：圖片、文字、按鈕都可點擊 -->
         <article class="category">
-          <a href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-             target="_blank" rel="noopener noreferrer"
+          <a class="category-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+             target="_blank"
+             rel="noopener noreferrer"
              aria-label="前往 CHAESOUL 服飾賣場">
+
             <img
               src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
               alt="日常服飾穿搭"
               loading="lazy">
+
             <h3>日常服飾</h3>
             <p>DAILY OUTFITS</p>
-          </a>
-          <a class="button"
-             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-             target="_blank" rel="noopener noreferrer">
-            逛服飾賣場 ↗
+            <span class="button">逛服飾賣場 ↗</span>
           </a>
         </article>
 
+        <!-- 飾品：圖片、文字、按鈕都可點擊 -->
         <article class="category">
-          <a href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
-             target="_blank" rel="noopener noreferrer"
+          <a class="category-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+             target="_blank"
+             rel="noopener noreferrer"
              aria-label="前往 CHAESOUL 飾品賣場">
+
             <img
               src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
               alt="質感飾品"
               loading="lazy">
+
             <h3>質感飾品</h3>
             <p>DAILY JEWELRY</p>
-          </a>
-          <a class="button"
-             href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
-             target="_blank" rel="noopener noreferrer">
-            逛飾品賣場 ↗
+            <span class="button">逛飾品賣場 ↗</span>
           </a>
         </article>
 
+        <!-- 情侶穿搭：圖片、文字、按鈕都可點擊 -->
         <article class="category">
-          <a href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-             target="_blank" rel="noopener noreferrer"
+          <a class="category-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+             target="_blank"
+             rel="noopener noreferrer"
              aria-label="前往 CHAESOUL 情侶穿搭賣場">
+
             <img
               src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80"
-              alt="時尚穿搭靈感"
+              alt="情侶穿搭靈感"
               loading="lazy">
+
             <h3>情侶穿搭</h3>
             <p>COUPLE LOOKS</p>
-          </a>
-          <a class="button"
-             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-             target="_blank" rel="noopener noreferrer">
-            逛情侶裝賣場 ↗
+            <span class="button">逛情侶裝賣場 ↗</span>
           </a>
         </article>
+
       </div>
     </section>
 
@@ -489,16 +546,18 @@
   <footer>
     <div class="logo">CHAESOUL</div>
     <p>WEAR YOUR SOUL. FIND YOUR STYLE.</p>
+
     <p>
       <a href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
          target="_blank" rel="noopener noreferrer">服飾賣場</a>
-     　|　
+      |
       <a href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
          target="_blank" rel="noopener noreferrer">飾品賣場</a>
-     　|　
+      |
       <a href="https://www.instagram.com/chaesoul.ag?exln=MnBjOWMzeGY5eXY%3D&utm_source=qr"
          target="_blank" rel="noopener noreferrer">Instagram</a>
     </p>
+
     <p>© CHAESOUL. ALL RIGHTS RESERVED.</p>
   </footer>
 </body>
