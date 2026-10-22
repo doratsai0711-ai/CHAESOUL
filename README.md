@@ -436,23 +436,29 @@
       <div class="categories">
 
         <!-- 服飾：圖片、文字、按鈕都可點擊 -->
-        <article class="category">
-          <a class="category-link"
-             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="前往 CHAESOUL 服飾賣場">
+       
+<!-- 服飾分類 -->
+<a class="category"
+   href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:block; text-align:center; color:inherit; text-decoration:none; cursor:pointer;">
 
-            <img
-              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
-              alt="日常服飾穿搭"
-              loading="lazy">
+  <img
+    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
+    alt="日常服飾穿搭"
+    loading="lazy"
+    style="aspect-ratio:4/5;">
 
-            <h3>日常服飾</h3>
-            <p>DAILY OUTFITS</p>
-            <span class="button">逛服飾賣場 ↗</span>
-          </a>
-        </article>
+  <h3>日常服飾</h3>
+  <p>DAILY OUTFITS</p>
+
+  <span class="button" style="display:block; width:100%;">
+    逛服飾賣場 ↗
+  </span>
+
+</a>
+
 
         <!-- 飾品：圖片、文字、按鈕都可點擊 -->
         <article class="category">
