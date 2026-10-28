@@ -153,7 +153,7 @@
       box-shadow: 0 8px 22px rgba(150, 105, 120, .10);
     }
 
-    /* 輪播區 */
+    /* 圖片輪播 */
     .carousel {
       position: relative;
       overflow: hidden;
@@ -306,18 +306,20 @@
       line-height: 2;
     }
 
-    .instagram-button {
+    /* Instagram 與 Threads 共用按鈕風格 */
+    .social-button {
       display: inline-block;
-      margin-top: 9px;
+      margin: 9px 4px 0;
       padding: 11px 23px;
       border: 1px solid #c8a5a3;
       color: #896868;
       font-family: Georgia, serif;
       font-size: 11px;
       letter-spacing: 1.5px;
+      transition: background .2s ease;
     }
 
-    .instagram-button:hover { background: var(--pink); }
+    .social-button:hover { background: var(--pink); }
 
     footer {
       padding: 20px 12px;
@@ -338,7 +340,7 @@
         letter-spacing: 5px;
       }
 
-      nav { gap: 21px; }
+      nav { gap: 18px; }
       .hero { padding: 39px 15px 34px; }
       .section { padding: 12px 23px 42px; }
       .categories { gap: 13px; }
@@ -360,6 +362,12 @@
       .carousel-arrow {
         width: 26px;
         height: 26px;
+      }
+
+      .social-button {
+        margin: 9px 3px 0;
+        padding: 11px 15px;
+        font-size: 10px;
       }
     }
 
@@ -389,6 +397,8 @@
     <a href="#about">ABOUT</a>
     <a href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
        target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+    <a href="https://www.threads.com/@chaesoul.ag"
+       target="_blank" rel="noopener noreferrer">THREADS ↗</a>
   </nav>
 
   <main>
@@ -416,6 +426,7 @@
                href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
                target="_blank" rel="noopener noreferrer"
                aria-label="前往服飾賣場">
+
               <img class="carousel-image active"
                 src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
                 alt="日常服飾穿搭示意圖">
@@ -455,6 +466,7 @@
                href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
                target="_blank" rel="noopener noreferrer"
                aria-label="前往飾品賣場">
+
               <img class="carousel-image active"
                 src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
                 alt="日常飾品示意圖">
@@ -506,10 +518,16 @@
 
       <p>追蹤我們，掌握新品與活動消息。</p>
 
-      <a class="instagram-button"
+      <a class="social-button"
          href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
          target="_blank" rel="noopener noreferrer">
-        @CHAESOUL__ ↗
+        INSTAGRAM @CHAESOUL__ ↗
+      </a>
+
+      <a class="social-button"
+         href="https://www.threads.com/@chaesoul.ag"
+         target="_blank" rel="noopener noreferrer">
+        THREADS @CHAESOUL.AG ↗
       </a>
     </section>
   </main>
@@ -538,12 +556,14 @@
         dot.type = "button";
         dot.className = "carousel-dot";
         dot.setAttribute("aria-label", `切換至第 ${index + 1} 張圖片`);
+
         dot.addEventListener("click", (event) => {
           event.preventDefault();
           event.stopPropagation();
           showImage(index);
           restartTimer();
         });
+
         dotsContainer.appendChild(dot);
         return dot;
       });
@@ -557,16 +577,23 @@
 
         dots.forEach((dot, i) => {
           dot.classList.toggle("active", i === current);
-          dot.setAttribute("aria-current", i === current ? "true" : "false");
+          dot.setAttribute(
+            "aria-current",
+            i === current ? "true" : "false"
+          );
         });
       }
 
       function stopTimer() {
-        if (timer) clearInterval(timer);
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
       }
 
       function startTimer() {
         stopTimer();
+
         timer = setInterval(() => {
           showImage(current + 1);
         }, 3000);
