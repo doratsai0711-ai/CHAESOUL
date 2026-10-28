@@ -19,13 +19,9 @@
       --white: #fffdfb;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -82,9 +78,7 @@
       letter-spacing: 1.5px;
     }
 
-    nav a:hover {
-      color: var(--rose);
-    }
+    nav a:hover { color: var(--rose); }
 
     .hero {
       padding: 48px 18px 42px;
@@ -115,9 +109,7 @@
       letter-spacing: 1px;
     }
 
-    .section {
-      padding: 16px 20px 52px;
-    }
+    .section { padding: 16px 20px 52px; }
 
     .section-heading {
       margin-bottom: 24px;
@@ -149,26 +141,99 @@
     }
 
     .category-card {
-      display: block;
       min-width: 0;
       overflow: hidden;
       background: var(--white);
       border: 1px solid #eee4df;
-      transition: transform 0.25s ease,
-        box-shadow 0.25s ease;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .category-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 22px rgba(150, 105, 120, 0.10);
+      box-shadow: 0 8px 22px rgba(150, 105, 120, .10);
     }
 
-    .category-image {
+    /* 輪播區 */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      background: #f0e4df;
+      touch-action: pan-y;
+    }
+
+    .carousel-link {
       display: block;
+      width: 100%;
+    }
+
+    .carousel-image {
+      display: none;
       width: 100%;
       aspect-ratio: 4 / 4.8;
       object-fit: cover;
       background: #f0e4df;
+    }
+
+    .carousel-image.active {
+      display: block;
+      animation: fadeIn .45s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: .55; }
+      to { opacity: 1; }
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 29px;
+      height: 29px;
+      padding: 0;
+      transform: translateY(-50%);
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 50%;
+      background: rgba(255,253,251,.82);
+      color: #806969;
+      font-size: 19px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .carousel-arrow:hover { background: white; }
+    .carousel-arrow.prev { left: 7px; }
+    .carousel-arrow.next { right: 7px; }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.65);
+      cursor: pointer;
+    }
+
+    .carousel-dot.active {
+      width: 16px;
+      border-radius: 6px;
+      background: white;
     }
 
     .category-info {
@@ -207,9 +272,7 @@
       letter-spacing: 1px;
     }
 
-    .category-card:hover .shop-link {
-      background: var(--pink);
-    }
+    .shop-link:hover { background: var(--pink); }
 
     .about {
       padding: 33px 18px;
@@ -254,9 +317,7 @@
       letter-spacing: 1.5px;
     }
 
-    .instagram-button:hover {
-      background: var(--pink);
-    }
+    .instagram-button:hover { background: var(--pink); }
 
     footer {
       padding: 20px 12px;
@@ -270,47 +331,43 @@
     }
 
     @media (max-width: 480px) {
-      header {
-        padding: 25px 12px 20px;
-      }
+      header { padding: 25px 12px 20px; }
 
       .logo {
         font-size: 32px;
         letter-spacing: 5px;
       }
 
-      nav {
-        gap: 21px;
-      }
+      nav { gap: 21px; }
+      .hero { padding: 39px 15px 34px; }
+      .section { padding: 12px 23px 42px; }
+      .categories { gap: 13px; }
 
-      .hero {
-        padding: 39px 15px 34px;
-      }
-
-      .section {
-        padding: 12px 23px 42px;
-      }
-
-      .categories {
-        gap: 13px;
-      }
-
-      .category-info {
-        padding: 14px 4px 16px;
-      }
+      .category-info { padding: 14px 4px 16px; }
 
       .category-info h3 {
         font-size: 13px;
         letter-spacing: 1px;
       }
 
-      .category-info p {
-        font-size: 9px;
-      }
+      .category-info p { font-size: 9px; }
 
       .shop-link {
         padding: 7px 8px;
         font-size: 9px;
+      }
+
+      .carousel-arrow {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -331,8 +388,7 @@
     <a href="#shop">SHOP</a>
     <a href="#about">ABOUT</a>
     <a href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
-       target="_blank"
-       rel="noopener noreferrer">INSTAGRAM ↗</a>
+       target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
   </nav>
 
   <main>
@@ -352,47 +408,85 @@
       </div>
 
       <div class="categories">
-        <!-- 服飾穿搭 -->
-        <a class="category-card"
-           href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="前往 CHAESOUL 服飾穿搭賣場">
 
-          <img
-            class="category-image"
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
-            alt="日常服飾與穿搭"
-            loading="lazy">
+        <!-- 服飾輪播 -->
+        <div class="category-card">
+          <div class="carousel" data-carousel aria-label="服飾商品圖片輪播">
+            <a class="carousel-link"
+               href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="前往服飾賣場">
+              <img class="carousel-image active"
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
+                alt="日常服飾穿搭示意圖">
+
+              <img class="carousel-image"
+                src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"
+                alt="女性日常穿搭示意圖"
+                loading="lazy">
+
+              <img class="carousel-image"
+                src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=85"
+                alt="時尚服裝示意圖"
+                loading="lazy">
+            </a>
+
+            <button class="carousel-arrow prev" type="button"
+              aria-label="上一張服飾圖片">‹</button>
+            <button class="carousel-arrow next" type="button"
+              aria-label="下一張服飾圖片">›</button>
+            <div class="carousel-dots" aria-label="選擇服飾圖片"></div>
+          </div>
 
           <div class="category-info">
             <div class="category-number">01 / FASHION</div>
             <h3>服飾穿搭</h3>
             <p>日常服飾・情侶裝</p>
-            <span class="shop-link">EXPLORE ↗</span>
+            <a class="shop-link"
+              href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+              target="_blank" rel="noopener noreferrer">EXPLORE ↗</a>
           </div>
-        </a>
+        </div>
 
-        <!-- 飾品選物 -->
-        <a class="category-card"
-           href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="前往 CHAESOUL 飾品選物賣場">
+        <!-- 飾品輪播 -->
+        <div class="category-card">
+          <div class="carousel" data-carousel aria-label="飾品商品圖片輪播">
+            <a class="carousel-link"
+               href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="前往飾品賣場">
+              <img class="carousel-image active"
+                src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+                alt="日常飾品示意圖">
 
-          <img
-            class="category-image"
-            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
-            alt="925 純銀與日常飾品"
-            loading="lazy">
+              <img class="carousel-image"
+                src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85"
+                alt="金屬飾品示意圖"
+                loading="lazy">
+
+              <img class="carousel-image"
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
+                alt="戒指飾品示意圖"
+                loading="lazy">
+            </a>
+
+            <button class="carousel-arrow prev" type="button"
+              aria-label="上一張飾品圖片">‹</button>
+            <button class="carousel-arrow next" type="button"
+              aria-label="下一張飾品圖片">›</button>
+            <div class="carousel-dots" aria-label="選擇飾品圖片"></div>
+          </div>
 
           <div class="category-info">
             <div class="category-number">02 / JEWELRY</div>
             <h3>飾品選物</h3>
             <p>925 純銀・日常飾品</p>
-            <span class="shop-link">EXPLORE ↗</span>
+            <a class="shop-link"
+              href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+              target="_blank" rel="noopener noreferrer">EXPLORE ↗</a>
           </div>
-        </a>
+        </div>
+
       </div>
     </section>
 
@@ -414,8 +508,7 @@
 
       <a class="instagram-button"
          href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         @CHAESOUL__ ↗
       </a>
     </section>
@@ -425,5 +518,98 @@
     CHAESOUL · WEAR YOUR SOUL<br>
     © 2026 CHAESOUL. ALL RIGHTS RESERVED.
   </footer>
+
+  <script>
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+      const images = Array.from(
+        carousel.querySelectorAll(".carousel-image")
+      );
+      const dotsContainer = carousel.querySelector(".carousel-dots");
+      const prevButton = carousel.querySelector(".prev");
+      const nextButton = carousel.querySelector(".next");
+
+      let current = 0;
+      let timer;
+      let touchStartX = 0;
+
+      // 建立圖片指示點
+      const dots = images.map((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", `切換至第 ${index + 1} 張圖片`);
+        dot.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          showImage(index);
+          restartTimer();
+        });
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
+
+      function showImage(index) {
+        current = (index + images.length) % images.length;
+
+        images.forEach((image, i) => {
+          image.classList.toggle("active", i === current);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === current);
+          dot.setAttribute("aria-current", i === current ? "true" : "false");
+        });
+      }
+
+      function stopTimer() {
+        if (timer) clearInterval(timer);
+      }
+
+      function startTimer() {
+        stopTimer();
+        timer = setInterval(() => {
+          showImage(current + 1);
+        }, 3000);
+      }
+
+      function restartTimer() {
+        startTimer();
+      }
+
+      prevButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        showImage(current - 1);
+        restartTimer();
+      });
+
+      nextButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        showImage(current + 1);
+        restartTimer();
+      });
+
+      carousel.addEventListener("mouseenter", stopTimer);
+      carousel.addEventListener("mouseleave", startTimer);
+
+      carousel.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      carousel.addEventListener("touchend", (event) => {
+        const touchEndX = event.changedTouches[0].clientX;
+        const difference = touchEndX - touchStartX;
+
+        if (Math.abs(difference) > 40) {
+          showImage(current + (difference < 0 ? 1 : -1));
+          restartTimer();
+        }
+      }, { passive: true });
+
+      showImage(0);
+      startTimer();
+    });
+  </script>
 </body>
 </html>
