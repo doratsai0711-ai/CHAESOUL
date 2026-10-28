@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff8f7">
+  <meta name="theme-color" content="#fbf6f2">
   <meta name="description" content="CHAESOUL｜Wear Your Soul。日常服飾、情侶穿搭與質感飾品。">
   <title>CHAESOUL | Wear Your Soul</title>
 
   <style>
     :root {
-      --pink: #e9b9c4;
-      --pink-dark: #bd8495;
-      --cream: #fff8f5;
-      --text: #514247;
-      --muted: #9a858a;
-      --white: #ffffff;
+      --bg: #fbf6f2;
+      --pink: #ead1d1;
+      --rose: #a77e80;
+      --text: #514544;
+      --muted: #a39591;
+      --line: #e9dfd9;
+      --white: #fffdfb;
     }
 
     * {
@@ -28,8 +29,8 @@
 
     body {
       margin: 0;
+      background: var(--bg);
       color: var(--text);
-      background: var(--cream);
       font-family: "Noto Sans TC", "PingFang TC",
         "Microsoft JhengHei", sans-serif;
     }
@@ -39,286 +40,285 @@
       text-decoration: none;
     }
 
-    .announcement {
-      padding: 10px 16px;
-      background: #f3dce1;
-      color: #76515d;
+    .topbar {
+      padding: 9px 12px;
+      background: #eee0db;
+      color: #806969;
       text-align: center;
-      font-size: 12px;
-      letter-spacing: 1.5px;
+      font-size: 10px;
+      letter-spacing: 2px;
     }
 
     header {
-      padding: 25px 20px 18px;
+      padding: 29px 16px 24px;
       text-align: center;
     }
 
     .logo {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 6vw, 46px);
-      font-weight: normal;
-      letter-spacing: 5px;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 6px;
     }
 
     .tagline {
-      margin: 9px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
       font-family: Georgia, serif;
-      font-size: 12px;
-      letter-spacing: 3px;
+      font-size: 10px;
+      letter-spacing: 4px;
     }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 25px;
-      padding: 15px 12px;
-      border-top: 1px solid #f0e4e4;
-      border-bottom: 1px solid #f0e4e4;
-      font-size: 12px;
-      letter-spacing: 1px;
+      gap: 30px;
+      padding: 13px 12px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+      letter-spacing: 1.5px;
     }
 
-    nav a:hover,
-    footer a:hover {
-      color: var(--pink-dark);
+    nav a:hover {
+      color: var(--rose);
     }
 
     .hero {
-      padding: 58px 20px 52px;
+      padding: 48px 18px 42px;
       text-align: center;
-      background:
-        radial-gradient(ellipse at 15% 20%, #f8e6e9 0%, transparent 48%),
-        radial-gradient(ellipse at 90% 80%, #f4e3da 0%, transparent 45%),
-        #fffaf8;
     }
 
     .hero-label {
-      color: var(--pink-dark);
+      color: var(--rose);
       font-family: Georgia, serif;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 4px;
     }
 
     .hero h2 {
-      margin: 16px 0 12px;
+      margin: 15px 0 12px;
       font-family: Georgia, "Noto Serif TC", serif;
-      font-size: clamp(27px, 5vw, 40px);
-      font-weight: normal;
-      letter-spacing: 2px;
+      font-size: clamp(23px, 5vw, 32px);
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1.6;
     }
 
     .hero p {
       margin: 0;
-      color: #8e7c81;
-      font-size: 13px;
-      line-height: 2;
+      color: #998985;
+      font-size: 11px;
+      line-height: 2.2;
       letter-spacing: 1px;
     }
 
     .section {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 48px 20px 55px;
+      padding: 16px 20px 52px;
     }
 
     .section-heading {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       text-align: center;
     }
 
     .section-heading h2 {
       margin: 0;
       font-family: Georgia, serif;
-      font-size: 22px;
-      font-weight: normal;
+      font-size: 19px;
+      font-weight: 400;
       letter-spacing: 3px;
     }
 
     .section-heading p {
-      margin: 9px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
     }
 
     .categories {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+      gap: 20px;
+      width: 100%;
+      max-width: 590px;
+      margin: 0 auto;
     }
 
     .category-card {
       display: block;
+      min-width: 0;
       overflow: hidden;
-      border: 1px solid #f0e4e4;
-      border-radius: 4px;
       background: var(--white);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid #eee4df;
+      transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .category-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(150, 105, 120, 0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(150, 105, 120, 0.10);
     }
 
     .category-image {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 4 / 4.8;
       object-fit: cover;
-      background: #f5e8e7;
+      background: #f0e4df;
     }
 
     .category-info {
-      padding: 21px 12px 24px;
+      padding: 17px 7px 20px;
       text-align: center;
     }
 
     .category-number {
-      color: var(--pink-dark);
+      color: var(--rose);
       font-family: Georgia, serif;
-      font-size: 11px;
+      font-size: 9px;
       letter-spacing: 2px;
     }
 
     .category-info h3 {
-      margin: 9px 0;
-      font-size: 18px;
-      font-weight: normal;
+      margin: 9px 0 7px;
+      font-size: 15px;
+      font-weight: 400;
       letter-spacing: 2px;
     }
 
     .category-info p {
       margin: 0;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 10px;
       line-height: 1.8;
     }
 
     .shop-link {
       display: inline-block;
-      margin-top: 17px;
-      padding: 10px 22px;
-      border: 1px solid var(--pink);
-      border-radius: 2px;
-      color: #986a79;
-      font-size: 11px;
+      margin-top: 14px;
+      padding: 8px 12px;
+      border: 1px solid #ddc3c1;
+      color: #967171;
+      font-size: 10px;
       letter-spacing: 1px;
     }
 
     .category-card:hover .shop-link {
       background: var(--pink);
-      color: white;
     }
 
     .about {
-      padding: 38px 20px;
-      background: #f8eceb;
+      padding: 33px 18px;
+      background: #f1e6e1;
       text-align: center;
     }
 
     .about h2 {
-      margin: 0 0 14px;
+      margin: 0 0 13px;
       font-family: Georgia, serif;
-      font-size: 20px;
-      font-weight: normal;
+      font-size: 18px;
+      font-weight: 400;
       letter-spacing: 3px;
     }
 
     .about p {
       margin: 0;
-      color: #8e7c81;
-      font-size: 12px;
+      color: #8f7e79;
+      font-size: 11px;
       line-height: 2.2;
-      letter-spacing: 0.5px;
     }
 
     .social {
-      padding: 38px 20px;
+      padding: 38px 18px 42px;
       text-align: center;
     }
 
     .social p {
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
+      font-size: 11px;
+      line-height: 2;
     }
 
     .instagram-button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 12px 25px;
-      border: 1px solid var(--pink-dark);
-      color: #986a79;
-      font-size: 12px;
-      letter-spacing: 1px;
-      transition: background 0.2s ease;
+      margin-top: 9px;
+      padding: 11px 23px;
+      border: 1px solid #c8a5a3;
+      color: #896868;
+      font-family: Georgia, serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
     }
 
     .instagram-button:hover {
-      background: #f3dce1;
+      background: var(--pink);
     }
 
     footer {
-      padding: 24px 15px;
-      border-top: 1px solid #f0e4e4;
+      padding: 20px 12px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       text-align: center;
       font-family: Georgia, serif;
-      font-size: 11px;
-      letter-spacing: 1px;
-      line-height: 2;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      line-height: 2.2;
     }
 
-    @media (max-width: 520px) {
-      .announcement {
-        font-size: 10px;
-        letter-spacing: 1px;
+    @media (max-width: 480px) {
+      header {
+        padding: 25px 12px 20px;
+      }
+
+      .logo {
+        font-size: 32px;
+        letter-spacing: 5px;
       }
 
       nav {
-        gap: 17px;
+        gap: 21px;
       }
 
       .hero {
-        padding: 45px 18px;
+        padding: 39px 15px 34px;
       }
 
       .section {
-        padding: 38px 14px 42px;
+        padding: 12px 23px 42px;
       }
 
       .categories {
-        gap: 12px;
+        gap: 13px;
       }
 
       .category-info {
-        padding: 17px 6px 20px;
+        padding: 14px 4px 16px;
       }
 
       .category-info h3 {
-        font-size: 15px;
+        font-size: 13px;
         letter-spacing: 1px;
       }
 
       .category-info p {
-        font-size: 11px;
+        font-size: 9px;
       }
 
       .shop-link {
-        padding: 9px 12px;
-        font-size: 10px;
+        padding: 7px 8px;
+        font-size: 9px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="announcement">
-    CHAESOUL · FIND YOUR OWN STYLE
+  <div class="topbar">
+    DAILY OUTFITS · JEWELRY · YOUR OWN STYLE
   </div>
 
   <header>
@@ -330,29 +330,29 @@
     <a href="#home">HOME</a>
     <a href="#shop">SHOP</a>
     <a href="#about">ABOUT</a>
-    <a href="https://www.instagram.com/chaesoul.ag/"
-       target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+    <a href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
+       target="_blank"
+       rel="noopener noreferrer">INSTAGRAM ↗</a>
   </nav>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-label">WELCOME TO CHAESOUL</div>
-      <h2>穿出屬於你的風格</h2>
+      <div class="hero-label">A LITTLE THING ABOUT YOU</div>
+      <h2>穿上喜歡的，成為喜歡的自己。</h2>
       <p>
-        不需要迎合誰，喜歡自己就是最好的風格。<br>
-        Find your style, wear your soul.
+        日常穿搭與心動飾品<br>
+        Find your own kind of beautiful.
       </p>
     </section>
 
     <section class="section" id="shop">
       <div class="section-heading">
         <h2>SHOP BY CATEGORY</h2>
-        <p>找到你的日常穿搭與心動飾品</p>
+        <p>挑選你的日常風格</p>
       </div>
 
       <div class="categories">
-
-        <!-- 分類一：服飾穿搭 -->
+        <!-- 服飾穿搭 -->
         <a class="category-card"
            href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
            target="_blank"
@@ -361,7 +361,7 @@
 
           <img
             class="category-image"
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
             alt="日常服飾與穿搭"
             loading="lazy">
 
@@ -369,11 +369,11 @@
             <div class="category-number">01 / FASHION</div>
             <h3>服飾穿搭</h3>
             <p>日常服飾・情侶裝</p>
-            <span class="shop-link">逛服飾賣場 ↗</span>
+            <span class="shop-link">EXPLORE ↗</span>
           </div>
         </a>
 
-        <!-- 分類二：飾品選物 -->
+        <!-- 飾品選物 -->
         <a class="category-card"
            href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
            target="_blank"
@@ -382,42 +382,41 @@
 
           <img
             class="category-image"
-            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85"
-            alt="日常飾品與銀飾"
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+            alt="925 純銀與日常飾品"
             loading="lazy">
 
           <div class="category-info">
             <div class="category-number">02 / JEWELRY</div>
             <h3>飾品選物</h3>
             <p>925 純銀・日常飾品</p>
-            <span class="shop-link">逛飾品賣場 ↗</span>
+            <span class="shop-link">EXPLORE ↗</span>
           </div>
         </a>
-
       </div>
     </section>
 
     <section class="about" id="about">
       <h2>ABOUT CHAESOUL</h2>
       <p>
-        用喜歡的衣服與飾品，記錄每一個日常。<br>
-        希望每一次選擇，都能讓你更喜歡自己。
+        把喜歡的穿搭留給日常，<br>
+        把每一份心動，變成生活裡的小小儀式。
       </p>
     </section>
 
     <section class="social">
       <div class="section-heading">
         <h2>FOLLOW OUR DAILY</h2>
-        <p>新品上架・穿搭分享・優惠活動</p>
+        <p>NEW ARRIVALS · DAILY LOOKS · EVENTS</p>
       </div>
 
-      <p>追蹤 Instagram，不錯過 CHAESOUL 的最新消息。</p>
+      <p>追蹤我們，掌握新品與活動消息。</p>
 
       <a class="instagram-button"
-         href="https://www.instagram.com/chaesoul.ag/"
+         href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
          target="_blank"
          rel="noopener noreferrer">
-        FOLLOW @CHAESOUL.AG ↗
+        @CHAESOUL__ ↗
       </a>
     </section>
   </main>
