@@ -8,6 +8,236 @@
   <meta name="description" content="CHAESOUL SELECT｜日常服飾、情侶穿搭、質感飾品與海外代購。">
   <title>HOME | CHAESOUL</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 首頁專屬樣式 */
+
+    .hero {
+      padding: 95px 20px;
+    }
+
+    .hero-label {
+      letter-spacing: 3px;
+    }
+
+    .hero h2 {
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .hero-secondary {
+      display: inline-block;
+      text-decoration: none;
+      color: #98736d;
+      border: 1px solid #c6a39c;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .hero-secondary:hover {
+      background: #f5e9e5;
+    }
+
+    .home-section {
+      max-width: 1120px;
+      margin: 0 auto 75px;
+      padding: 0 22px;
+    }
+
+    .category-number {
+      color: #a98b83;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .category-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .picks-heading {
+      text-align: center;
+      margin: 50px 0 25px;
+    }
+
+    .picks-heading h2 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .picks-heading p {
+      color: #a18d86;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .home-products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .home-product {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 16px rgba(100, 70, 60, .06);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home-product img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      background: #f5eeea;
+    }
+
+    .home-product-info {
+      padding: 15px 10px 17px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+    }
+
+    .home-product-tag {
+      color: #a77e77;
+      background: #f7ece9;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 9px;
+    }
+
+    .home-product h3 {
+      font-size: 13px;
+      color: #51443f;
+      margin: 0 0 8px;
+      line-height: 1.6;
+    }
+
+    .home-product-price {
+      color: #8d6963;
+      font-size: 16px;
+      font-weight: 600;
+      margin: auto 0 12px;
+    }
+
+    .home-product-link {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      background: #bd9690;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      padding: 10px 5px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .home-product-link:hover {
+      background: #98716c;
+    }
+
+    .all-products {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .all-products a {
+      color: #98736d;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #c6a39c;
+      padding-bottom: 5px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 22px 12px;
+      text-align: center;
+    }
+
+    .service-item h3 {
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin: 0 0 9px;
+    }
+
+    .service-item p {
+      color: #96847e;
+      font-size: 11px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .social {
+      padding: 45px 20px;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 75px 18px;
+      }
+
+      .home-section {
+        padding: 0 15px;
+        margin-bottom: 55px;
+      }
+
+      .home-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .home-product-info {
+        padding: 12px 8px 14px;
+      }
+
+      .home-product h3 {
+        font-size: 12px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .hero-actions {
+        gap: 9px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -34,19 +264,32 @@
 
   <!-- 品牌主視覺 -->
   <section class="hero">
+
     <div class="hero-label">A LITTLE THING ABOUT YOU</div>
+
     <h2>穿上喜歡的，成為喜歡的自己。</h2>
+
     <p>
       日常穿搭與心動飾品<br>
       Find your own kind of beautiful.
     </p>
-    <a class="outline-link" href="shop.html">
-      EXPLORE OUR COLLECTION ↗
-    </a>
+
+    <div class="hero-actions">
+      <a class="outline-link" href="shop.html">
+        EXPLORE OUR COLLECTION ↗
+      </a>
+
+      <a class="hero-secondary" href="about.html">
+        ABOUT CHAESOUL
+      </a>
+    </div>
+
   </section>
 
+
   <!-- 商品分類 -->
-  <section class="section">
+  <section class="home-section">
+
     <div class="section-heading">
       <h2>SHOP BY CATEGORY</h2>
       <p>挑選你的日常風格</p>
@@ -54,19 +297,22 @@
 
     <div class="categories">
 
+      <!-- 服飾 -->
       <article class="category-card">
+
         <a href="shop.html#fashion">
           <img
-            class="carousel-image active"
-            style="display:block"
             src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-            alt="日常服飾穿搭">
+            alt="CHAESOUL 日常服飾穿搭">
         </a>
 
         <div class="category-info">
           <div class="category-number">01 / FASHION</div>
+
           <h3>服飾穿搭</h3>
-          <p>日常服飾・情侶裝</p>
+
+          <p>日常服飾・韓系穿搭・情侶裝</p>
+
           <a class="shop-link"
              href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
              target="_blank"
@@ -74,21 +320,26 @@
             前往服飾賣場 ↗
           </a>
         </div>
+
       </article>
 
+
+      <!-- 飾品 -->
       <article class="category-card">
+
         <a href="shop.html#jewelry">
           <img
-            class="carousel-image active"
-            style="display:block"
             src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85"
-            alt="日常飾品">
+            alt="CHAESOUL 日常飾品">
         </a>
 
         <div class="category-info">
           <div class="category-number">02 / JEWELRY</div>
+
           <h3>飾品選物</h3>
-          <p>925 純銀・日常飾品</p>
+
+          <p>925 純銀・日常飾品・情侶配件</p>
+
           <a class="shop-link"
              href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
              target="_blank"
@@ -96,13 +347,155 @@
             前往飾品賣場 ↗
           </a>
         </div>
+
       </article>
 
     </div>
+
   </section>
+
+
+  <!-- 主打商品 -->
+  <section class="home-section">
+
+    <div class="picks-heading">
+      <h2>BEST PICKS</h2>
+      <p>CHAESOUL SELECTED ITEMS</p>
+    </div>
+
+    <div class="home-products">
+
+      <!-- 服飾 1 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85"
+          alt="韓系修身套裝">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">STYLE PICK</span>
+          <h3>韓系修身兩件套</h3>
+          <p class="home-product-price">NT$650</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- 服飾 2 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85"
+          alt="小狗圖案服飾">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">POPULAR PICK</span>
+          <h3>小狗圖案服飾</h3>
+          <p class="home-product-price">NT$450</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- 服飾 3 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
+          alt="基本色系服飾">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">DAILY PICK</span>
+          <h3>基本色系服飾</h3>
+          <p class="home-product-price">NT$349</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- 飾品 1 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=700&q=85"
+          alt="925 純銀成對商品">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">COUPLE PICK</span>
+          <h3>925 純銀成對商品</h3>
+          <p class="home-product-price">NT$350</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- 飾品 2 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85"
+          alt="925 純銀項鍊">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">DAILY PICK</span>
+          <h3>925 純銀項鍊</h3>
+          <p class="home-product-price">NT$490</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- 飾品 3 -->
+      <article class="home-product">
+        <img
+          src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
+          alt="925 純銀戒指">
+
+        <div class="home-product-info">
+          <span class="home-product-tag">SILVER PICK</span>
+          <h3>925 純銀戒指系列</h3>
+          <p class="home-product-price">NT$850</p>
+
+          <a class="home-product-link"
+             href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
+             target="_blank" rel="noopener noreferrer">
+            前往選購 ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="all-products">
+      <a href="shop.html">VIEW ALL COLLECTIONS ↗</a>
+    </div>
+
+  </section>
+
 
   <!-- 品牌理念 -->
   <section class="soft-section">
+
     <div class="section-heading">
       <h2>WEAR YOUR SOUL</h2>
       <p>YOUR STYLE, YOUR STORY</p>
@@ -116,10 +509,54 @@
     <a class="outline-link" href="about.html">
       認識 CHAESOUL ↗
     </a>
+
   </section>
 
-  <!-- 官方 LINE 導流 -->
+
+  <!-- 購物服務 -->
+  <section class="home-section">
+
+    <div class="section-heading">
+      <h2>SHOPPING WITH US</h2>
+      <p>簡單購物，安心選擇</p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-item">
+        <h3>IN STOCK</h3>
+        <p>現貨商品<br>確認訂單後儘速出貨</p>
+      </div>
+
+      <div class="service-item">
+        <h3>PREORDER</h3>
+        <p>預購商品<br>約 10–15 個工作天</p>
+      </div>
+
+      <div class="service-item">
+        <h3>CUSTOMER SERVICE</h3>
+        <p>訂單、尺寸與商品問題<br>官方 LINE 專人協助</p>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;color:#a18d86;font-size:11px;line-height:1.8;margin-top:18px">
+      實際出貨時間依商品供應及物流狀況為準。<br>
+      詳細購買規範請參閱購買須知。
+    </p>
+
+    <div style="text-align:center;margin-top:18px">
+      <a class="outline-link" href="contact.html">
+        VIEW SHOPPING GUIDE ↗
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- 官方 LINE -->
   <section class="soft-section">
+
     <div class="section-heading">
       <h2>CHAESOUL SELECT</h2>
       <p>YOUR EXCLUSIVE SHOPPING SERVICE</p>
@@ -136,10 +573,13 @@
        rel="noopener noreferrer">
       JOIN OUR OFFICIAL LINE ↗
     </a>
+
   </section>
+
 
   <!-- 社群平台 -->
   <section class="social">
+
     <div class="section-heading">
       <h2>FOLLOW OUR DAILY</h2>
       <p>NEW ARRIVALS · DAILY LOOKS · EVENTS</p>
@@ -160,6 +600,7 @@
        rel="noopener noreferrer">
       THREADS ↗
     </a>
+
   </section>
 
 </main>
