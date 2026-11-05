@@ -1,70 +1,840 @@
-:root{--bg:#fbf6f2;--pink:#ead1d1;--rose:#a77e80;--text:#514544;--muted:#a39591;--line:#e9dfd9;--white:#fffdfb}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
-a{color:inherit;text-decoration:none}button{font:inherit}
-.topbar{padding:9px 12px;background:#eee0db;color:#806969;text-align:center;font-size:10px;letter-spacing:2px}
-header{padding:29px 16px 24px;text-align:center}
-.logo{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:38px;font-weight:400;letter-spacing:6px}
-.tagline{margin:8px 0 0;color:var(--muted);font-family:Georgia,serif;font-size:10px;letter-spacing:4px}
-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:25px;padding:14px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1.5px}
-nav a{transition:color .2s}nav a:hover,nav a[aria-current="page"]{color:var(--rose)}
-.hero{padding:65px 18px 58px;text-align:center}
-.hero-label{color:var(--rose);font-family:Georgia,serif;font-size:10px;letter-spacing:4px}
-.hero h2{margin:15px 0 12px;font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(23px,5vw,32px);font-weight:400;letter-spacing:3px;line-height:1.6}
-.hero p{margin:0;color:#998985;font-size:11px;line-height:2.2;letter-spacing:1px}
-.section{padding:30px 20px 60px}
-.section-heading{margin-bottom:28px;text-align:center}
-.section-heading h2{margin:0;font-family:Georgia,serif;font-size:19px;font-weight:400;letter-spacing:3px}
-.section-heading p{margin:8px 0 0;color:var(--muted);font-size:10px;letter-spacing:1.5px}
-.categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;max-width:760px;margin:0 auto}
-.category-card{min-width:0;overflow:hidden;background:var(--white);border:1px solid #eee4df;transition:transform .25s,box-shadow .25s}
-.category-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px #9669781a}
-.carousel{position:relative;overflow:hidden;background:#f0e4df;touch-action:pan-y}
-.carousel-link{display:block;width:100%}
-.carousel-image{display:none;width:100%;aspect-ratio:4/4.8;object-fit:cover;background:#f0e4df}
-.carousel-image.active{display:block;animation:fadeIn .45s ease}
-@keyframes fadeIn{from{opacity:.55}to{opacity:1}}
-.carousel-arrow{position:absolute;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;transform:translateY(-50%);border:1px solid #ffffffbf;border-radius:50%;background:#fffdfbd1;color:#806969;font-size:19px;cursor:pointer}
-.carousel-arrow.prev{left:8px}.carousel-arrow.next{right:8px}
-.carousel-dots{position:absolute;bottom:10px;left:0;right:0;z-index:2;display:flex;justify-content:center;gap:6px}
-.carousel-dot{width:6px;height:6px;padding:0;border:0;border-radius:50%;background:#ffffffa6;cursor:pointer}
-.carousel-dot.active{width:16px;border-radius:6px;background:white}
-.category-info{padding:18px 10px 21px;text-align:center}
-.category-number{color:var(--rose);font-family:Georgia,serif;font-size:9px;letter-spacing:2px}
-.category-info h3{margin:9px 0 7px;font-size:15px;font-weight:400;letter-spacing:2px}
-.category-info p{margin:0;color:var(--muted);font-size:10px;line-height:1.8}
-.shop-link,.outline-link{display:inline-block;margin-top:14px;padding:9px 16px;border:1px solid #ddc3c1;color:#967171;font-size:10px;letter-spacing:1px;transition:background .2s}
-.shop-link:hover,.outline-link:hover{background:var(--pink)}
-.about,.soft-section{padding:58px 20px;background:#f1e6e1;text-align:center}
-.about-content{max-width:680px;margin:auto}
-.about h2{margin:0 0 18px;font-family:Georgia,serif;font-size:20px;font-weight:400;letter-spacing:3px}
-.about .about-lead{margin:0 0 17px;color:#806969;font-size:15px;letter-spacing:2px}
-.about p{margin:0;color:#8f7e79;font-size:11px;line-height:2.4;letter-spacing:.5px}
-.about-details{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:650px;margin:35px auto 0}
-.about-item{padding:20px 10px;background:#fffdfb8c}
-.about-item h3{margin:0 0 9px;color:#967171;font-family:Georgia,serif;font-size:13px;font-weight:400;letter-spacing:1px}
-.about-item p{font-size:10px;line-height:1.9}
-.contact-wrap{max-width:700px;margin:0 auto;text-align:center}
-.contact-intro{color:var(--muted);font-size:12px;line-height:2}
-.line-card{max-width:490px;margin:30px auto 0;padding:38px 24px;background:var(--white);border:1px solid var(--line)}
-.line-mark{width:62px;height:62px;margin:0 auto 18px;display:grid;place-items:center;border-radius:18px;background:#06c755;color:white;font-weight:700;font-size:24px}
-.line-card h3{margin:0 0 10px;font-size:16px;font-weight:400;letter-spacing:2px}
-.line-card p{margin:0;color:var(--muted);font-size:11px;line-height:2}
-.line-button{display:inline-block;margin-top:22px;padding:14px 30px;background:#06c755;color:white;font-size:12px;letter-spacing:1px;transition:opacity .2s}
-.line-button:hover{opacity:.85}
-.line-note{margin-top:18px;color:var(--muted);font-size:10px;line-height:1.8}
-.social{padding:45px 18px 50px;text-align:center;background:#f7efeb}
-.social p{color:var(--muted);font-size:11px;line-height:2}
-.social-button{display:inline-block;margin:9px 4px 0;padding:11px 20px;border:1px solid #c8a5a3;color:#896868;font-family:Georgia,serif;font-size:11px;letter-spacing:1px;transition:background .2s}
-.social-button:hover{background:var(--pink)}
-.page-intro{padding:50px 18px 28px;text-align:center}
-.page-intro h2{margin:0;font-family:Georgia,serif;font-size:24px;font-weight:400;letter-spacing:3px}
-.page-intro p{margin:10px 0 0;color:var(--muted);font-size:11px;letter-spacing:1px}
-footer{padding:22px 12px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-family:Georgia,serif;font-size:10px;letter-spacing:1.5px;line-height:2.2}
-@media(max-width:560px){header{padding:25px 12px 20px}.logo{font-size:32px;letter-spacing:5px}nav{gap:13px;font-size:9px}.hero{padding:43px 15px 38px}.section{padding:20px 16px 45px}.categories{gap:12px}.category-info{padding:14px 5px 16px}.category-info h3{font-size:13px;letter-spacing:1px}.category-info p{font-size:9px}.shop-link{padding:8px 9px;font-size:9px}.about-details{grid-template-columns:1fr;gap:10px}.line-card{padding:30px 18px}.social-button{padding:10px 13px;font-size:10px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
-/* 商品分類版面優化 */
+/* ========================================
+   CHAESOUL SELECT
+   GLOBAL DESIGN SYSTEM
+======================================== */
+
+:root {
+  --bg: #fbf6f2;
+  --pink: #ead1d1;
+  --pink-light: #f5e9e5;
+  --rose: #a77e80;
+  --rose-dark: #896868;
+  --text: #514544;
+  --muted: #a39591;
+  --line: #e9dfd9;
+  --white: #fffdfb;
+  --cream: #f1e6e1;
+  --green: #06c755;
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: "Noto Sans TC", "PingFang TC",
+    "Microsoft JhengHei", sans-serif;
+
+  --radius: 12px;
+  --radius-large: 18px;
+
+  --shadow: 0 8px 24px rgba(150, 105, 120, 0.08);
+  --transition: .25s ease;
+}
+
+
+/* ========================================
+   RESET & BASE
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--text);
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.topbar {
+  padding: 9px 12px;
+  background: #eee0db;
+  color: #806969;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+  padding: 29px 16px 24px;
+  text-align: center;
+}
+
+.logo {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 1.3;
+}
+
+.logo a {
+  transition: color var(--transition);
+}
+
+.logo a:hover {
+  color: var(--rose);
+}
+
+.tagline {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  padding: 14px 12px;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+nav a {
+  position: relative;
+  padding: 4px 0;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--rose);
+}
+
+nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--rose);
+}
+
+
+/* ========================================
+   PAGE INTRO
+======================================== */
+
+.page-intro {
+  padding: 50px 18px 28px;
+  text-align: center;
+}
+
+.page-intro h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.page-intro p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  padding: 65px 18px 58px;
+  text-align: center;
+}
+
+.hero-label {
+  color: var(--rose);
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.hero h2 {
+  margin: 15px 0 12px;
+  font-family: Georgia, "Noto Serif TC", serif;
+  font-size: clamp(23px, 5vw, 32px);
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+.hero p {
+  margin: 0;
+  color: #998985;
+  font-size: 11px;
+  line-height: 2.2;
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.section {
+  padding: 30px 20px 60px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.section-heading p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   CATEGORY CARDS
+======================================== */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.category-card {
+  min-width: 0;
+  overflow: hidden;
+
+  background: var(--white);
+  border: 1px solid #eee4df;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   IMAGE CAROUSEL
+======================================== */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  background: #f0e4df;
+  touch-action: pan-y;
+}
+
+.carousel-link {
+  display: block;
+  width: 100%;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  aspect-ratio: 4 / 4.8;
+  object-fit: cover;
+  background: #f0e4df;
+}
+
+.carousel-image.active {
+  display: block;
+  animation: fadeIn .45s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: .55;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  border: 1px solid #ffffffbf;
+  border-radius: 50%;
+
+  background: #fffdfbd1;
+  color: #806969;
+
+  font-size: 19px;
+
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.carousel-arrow:hover {
+  background: #fff;
+}
+
+.carousel-arrow.prev {
+  left: 8px;
+}
+
+.carousel-arrow.next {
+  right: 8px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #ffffffa6;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  width: 16px;
+  border-radius: 6px;
+  background: white;
+}
+
+
+/* ========================================
+   CATEGORY INFO
+======================================== */
+
+.category-info {
+  padding: 18px 10px 21px;
+  text-align: center;
+}
+
+.category-number {
+  color: var(--rose);
+  font-family: var(--font-serif);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.category-info h3 {
+  margin: 9px 0 7px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.category-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   BUTTONS & LINKS
+======================================== */
+
+.shop-link,
+.outline-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 18px;
+
+  border: 1px solid #ddc3c1;
+  background: transparent;
+
+  color: #967171;
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.shop-link:hover,
+.outline-link:hover {
+  background: var(--pink);
+  color: var(--text);
+}
+
+.social-button {
+  display: inline-block;
+  margin: 9px 4px 0;
+  padding: 11px 20px;
+
+  border: 1px solid #c8a5a3;
+
+  background: transparent;
+  color: #896868;
+
+  font-family: var(--font-serif);
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.social-button:hover {
+  background: var(--pink);
+  color: var(--text);
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about,
+.soft-section {
+  padding: 58px 20px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.about-content {
+  max-width: 680px;
+  margin: auto;
+}
+
+.about h2 {
+  margin: 0 0 18px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.about .about-lead {
+  margin: 0 0 17px;
+  color: #806969;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.about p {
+  margin: 0;
+  color: #8f7e79;
+  font-size: 11px;
+  line-height: 2.4;
+  letter-spacing: .5px;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+
+  max-width: 650px;
+  margin: 35px auto 0;
+}
+
+.about-item {
+  padding: 20px 10px;
+  background: #fffdfb8c;
+}
+
+.about-item h3 {
+  margin: 0 0 9px;
+  color: #967171;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.about-item p {
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   CONTACT & LINE
+======================================== */
+
+.contact-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-intro {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.line-card {
+  max-width: 490px;
+  margin: 30px auto 0;
+  padding: 38px 24px;
+
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-large);
+}
+
+.line-mark {
+  display: grid;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+
+  border-radius: 18px;
+  background: var(--green);
+  color: white;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.line-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.line-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 2;
+}
+
+.line-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 14px 30px;
+
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  transition: opacity var(--transition);
+}
+
+.line-button:hover {
+  opacity: .85;
+}
+
+.line-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   FAQ
+======================================== */
+
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 22px 70px;
+}
+
+.faq-heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.faq-heading h2 {
+  margin-bottom: 10px;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.faq-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.faq-category {
+  margin: 35px 0 15px;
+  color: var(--rose);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  background: var(--white);
+}
+
+.faq-item summary {
+  position: relative;
+  padding: 19px 48px 19px 22px;
+
+  color: #554c48;
+  font-size: 15px;
+  line-height: 1.7;
+
+  list-style: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 22px;
+
+  transform: translateY(-50%);
+
+  color: var(--rose);
+  font-size: 22px;
+}
+
+.faq-item[open] summary {
+  color: var(--rose-dark);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 0 22px 22px;
+  color: #777;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.faq-answer ol,
+.faq-answer ul {
+  padding-left: 22px;
+  margin: 8px 0;
+}
+
+.faq-answer li {
+  margin-bottom: 7px;
+}
+
+.faq-answer strong {
+  color: #8e6b68;
+}
+
+.faq-answer a {
+  color: var(--rose);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.faq-note {
+  margin-top: 12px;
+  padding: 13px 16px;
+
+  border-radius: 8px;
+  background: #faf5f1;
+
+  color: #8f7e79;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   SOCIAL
+======================================== */
+
+.social {
+  padding: 45px 18px 50px;
+  background: #f7efeb;
+  text-align: center;
+}
+
+.social p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 2;
+}
+
+.social .section-heading {
+  margin-bottom: 28px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-buttons .social-button {
+  margin: 0;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  padding: 22px 12px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+  text-align: center;
+
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 2.2;
+}
+
+
+/* ========================================
+   PRODUCT PAGE SUPPORT
+======================================== */
+
+/* 商品分類版面 */
+
 #fashion .categories,
 #jewelry .categories {
   grid-template-columns: minmax(0, 560px);
@@ -76,15 +846,249 @@ footer{padding:22px 12px;border-top:1px solid var(--line);color:var(--muted);tex
   width: 100%;
 }
 
-/* 商品圖片比例 */
+/* 商品分類圖片 */
+
 #fashion .carousel-image,
 #jewelry .carousel-image {
   aspect-ratio: 4 / 4.5;
   object-fit: cover;
 }
 
-/* 手機版優化 */
+/* 商品圖片統一 */
+
+.product-card img,
+.product-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* 商品區塊 */
+
+.product-grid,
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  min-width: 0;
+  overflow: hidden;
+
+  background: var(--white);
+  border: 1px solid var(--line);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.product-info {
+  padding: 16px 14px 20px;
+  text-align: center;
+}
+
+.product-info h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.product-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.product-price {
+  margin-top: 10px;
+  color: var(--rose-dark);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .product-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+}
+
+
 @media (max-width: 560px) {
+
+  /* Header */
+
+  header {
+    padding: 25px 12px 20px;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 5px;
+  }
+
+  /* Navigation */
+
+  nav {
+    gap: 13px;
+    padding: 12px 10px;
+    font-size: 9px;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding: 43px 15px 38px;
+  }
+
+  .hero h2 {
+    letter-spacing: 2px;
+  }
+
+  /* Section */
+
+  .section {
+    padding: 20px 16px 45px;
+  }
+
+  .page-intro {
+    padding: 40px 15px 25px;
+  }
+
+  .page-intro h2 {
+    font-size: 21px;
+  }
+
+  /* Categories */
+
+  .categories {
+    gap: 12px;
+  }
+
+  .category-info {
+    padding: 14px 5px 16px;
+  }
+
+  .category-info h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .category-info p {
+    font-size: 9px;
+  }
+
+  .shop-link,
+  .outline-link {
+    padding: 8px 9px;
+    font-size: 9px;
+  }
+
+  /* About */
+
+  .about,
+  .soft-section {
+    padding: 42px 16px;
+  }
+
+  .about-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-item {
+    padding: 17px 12px;
+  }
+
+  /* Contact */
+
+  .line-card {
+    padding: 30px 18px;
+  }
+
+  /* FAQ */
+
+  .faq-section {
+    padding: 15px 15px 50px;
+  }
+
+  .faq-heading h2 {
+    font-size: 21px;
+  }
+
+  .faq-item summary {
+    padding: 16px 42px 16px 18px;
+    font-size: 14px;
+  }
+
+  .faq-item summary::after {
+    right: 17px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 18px;
+    font-size: 13px;
+  }
+
+  .faq-category {
+    font-size: 14px;
+  }
+
+  /* Social */
+
+  .social {
+    padding: 38px 15px 42px;
+  }
+
+  .social-button {
+    padding: 10px 13px;
+    font-size: 10px;
+  }
+
+  /* Product */
+
+  .product-grid,
+  .products-grid {
+    gap: 10px;
+  }
+
+  .product-info {
+    padding: 12px 8px 15px;
+  }
+
+  .product-info h3 {
+    font-size: 12px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  /* Category pages */
+
   #fashion .categories,
   #jewelry .categories {
     grid-template-columns: minmax(0, 1fr);
@@ -100,4 +1104,54 @@ footer{padding:22px 12px;border-top:1px solid var(--line);color:var(--muted);tex
     padding: 11px 20px;
     font-size: 10px;
   }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+  .logo {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  nav {
+    gap: 10px;
+    font-size: 8px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .categories {
+    gap: 8px;
+  }
+
+  .category-info h3 {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
 }
