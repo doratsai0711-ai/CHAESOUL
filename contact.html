@@ -1,20 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#fbf6f2">
-  <meta name="description" content="CHAESOUL SELECT 官方聯絡頁面｜日常服飾、情侶穿搭、質感飾品與海外代購。">
-  <title>CONTACT | CHAESOUL</title>
+  <meta name="description" content="CHAESOUL SELECT｜常見問題與官方 LINE 客服。">
+  <title>常見問題與聯絡我們 | CHAESOUL</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .faq-section {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 55px 20px 75px;
+    }
+
+    .faq-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .faq-heading h2 {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      letter-spacing: 3px;
+      color: #806969;
+      font-weight: normal;
+    }
+
+    .faq-heading p {
+      color: #a39591;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e9dfd9;
+      padding: 18px 5px;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      color: #665454;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 20px;
+      color: #b58f90;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 15px 25px 3px 0;
+      color: #938581;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .faq-answer a {
+      color: #a77e80;
+      text-decoration: underline;
+    }
+
+    .faq-contact {
+      margin-top: 38px;
+      padding: 28px 20px;
+      background: #f7efeb;
+      text-align: center;
+    }
+
+    .faq-contact h3 {
+      color: #806969;
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .faq-contact p {
+      color: #a39591;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 480px) {
+      .faq-section {
+        padding: 40px 18px 55px;
+      }
+
+      .faq-item summary {
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  DAILY OUTFITS · JEWELRY · YOUR OWN STYLE
-</div>
+<div class="topbar">DAILY OUTFITS · JEWELRY · YOUR OWN STYLE</div>
 
 <header>
   <h1 class="logo"><a href="index.html">CHAESOUL</a></h1>
@@ -25,7 +123,7 @@
   <a href="index.html">HOME</a>
   <a href="shop.html">SHOP</a>
   <a href="about.html">ABOUT</a>
-  <a href="contact.html" aria-current="page">CONTACT</a>
+  <a href="contact.html" aria-current="page">CONTACT LINE</a>
   <a href="https://www.instagram.com/chaesoul__/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
   <a href="https://www.threads.com/@chaesoul__" target="_blank" rel="noopener noreferrer">THREADS ↗</a>
 </nav>
@@ -33,70 +131,126 @@
 <main>
 
   <section class="page-intro">
-    <h2>CONTACT US</h2>
-    <p>LET'S TALK WITH CHAESOUL</p>
+    <h2>CONTACT & FAQ</h2>
+    <p>WE ARE HERE TO HELP YOU</p>
   </section>
 
+  <!-- 官方 LINE -->
   <section class="section">
     <div class="contact-wrap">
-
       <p class="contact-intro">
         有任何商品、訂單、尺寸或代購問題，<br>
         歡迎加入 CHAESOUL 官方 LINE 與我們聯絡。<br>
-        我們會盡快為你提供協助。
+        讓我們協助你找到喜歡的商品。
       </p>
 
       <div class="line-card">
-        <div class="line-mark">OFFICIAL LINE</div>
-
+        <div class="line-mark">LINE</div>
         <h3>CHAESOUL SELECT</h3>
-
-        <p>
-          服飾選品・質感飾品・海外代購
-        </p>
-
-        <p>
-          新品資訊、訂單查詢及商品問題，<br>
-          都可以透過官方 LINE 與我們聯繫。
-        </p>
-
-        <a
-          class="line-button"
-          href="https://lin.ee/R7tp9XY"
-          target="_blank"
-          rel="noopener noreferrer">
-          加入 CHAESOUL SELECT ↗
+        <p>商品詢問・訂單問題・海外代購</p>
+        <a class="line-button"
+           href="https://lin.ee/R7tp9XY"
+           target="_blank"
+           rel="noopener noreferrer">
+          加入官方 LINE ↗
         </a>
-
         <p class="line-note">
-          歡迎加入官方 LINE，掌握新品與最新活動資訊。
+          點擊按鈕即可加入官方帳號。
         </p>
       </div>
-
     </div>
   </section>
 
+  <!-- 常見問題 -->
+  <section class="faq-section">
+
+    <div class="faq-heading">
+      <h2>FREQUENTLY ASKED QUESTIONS</h2>
+      <p>購買前先看看這裡，快速找到你需要的答案。</p>
+    </div>
+
+    <details class="faq-item">
+      <summary>Q1. 商品有現貨嗎？多久可以出貨？</summary>
+      <div class="faq-answer">
+        現貨商品會盡快安排出貨；非現貨及預購商品約需
+        10–15 天（不含例假日），實際時間依商品供貨狀況為準。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Q2. 可以詢問商品尺寸嗎？</summary>
+      <div class="faq-answer">
+        當然可以！如果不確定尺寸，歡迎加入官方 LINE，
+        提供想詢問的商品及平常穿著尺寸，我們會協助你確認。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Q3. 海外代購商品多久會到貨？</summary>
+      <div class="faq-answer">
+        海外代購商品會依每次海外代購行程安排採購及寄送，
+        因此到貨時間可能有所不同。實際進度請以官方 LINE 公告或客服回覆為準。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Q4. 如果忘記取貨，包裹被退回怎麼辦？</summary>
+      <div class="faq-answer">
+        如果包裹未能順利取貨，請先透過官方 LINE 聯繫我們。
+        若包裹已退回並需要重新寄送，需另行支付補寄運費
+        NT$60，並於補寄前完成款項確認。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Q5. 可以在哪裡查看商品及下單？</summary>
+      <div class="faq-answer">
+        目前分為服飾及飾品兩個賣場，可以從網站 SHOP 頁面
+        前往選購，也可以透過官方 LINE 詢問商品資訊。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Q6. 收到商品有問題，該怎麼處理？</summary>
+      <div class="faq-answer">
+        若收到商品後發現有瑕疵或商品寄送錯誤，
+        請先保留商品及包裝，並透過官方 LINE 聯繫我們，
+        提供訂單資訊及商品照片，以便協助確認。
+      </div>
+    </details>
+
+    <div class="faq-contact">
+      <h3>STILL HAVE QUESTIONS?</h3>
+      <p>
+        沒有找到想要的答案嗎？<br>
+        歡迎直接聯繫 CHAESOUL SELECT。
+      </p>
+      <a class="line-button"
+         href="https://lin.ee/R7tp9XY"
+         target="_blank"
+         rel="noopener noreferrer">
+        前往官方 LINE ↗
+      </a>
+    </div>
+
+  </section>
+
+  <!-- 社群 -->
   <section class="social">
     <div class="section-heading">
       <h2>FOLLOW OUR DAILY</h2>
       <p>NEW ARRIVALS · DAILY LOOKS · EVENTS</p>
     </div>
 
-    <a
-      class="social-button"
-      href="https://www.instagram.com/chaesoul__/"
-      target="_blank"
-      rel="noopener noreferrer">
-      INSTAGRAM ↗
-    </a>
+    <a class="social-button"
+       href="https://www.instagram.com/chaesoul__/"
+       target="_blank"
+       rel="noopener noreferrer">INSTAGRAM ↗</a>
 
-    <a
-      class="social-button"
-      href="https://www.threads.com/@chaesoul__"
-      target="_blank"
-      rel="noopener noreferrer">
-      THREADS ↗
-    </a>
+    <a class="social-button"
+       href="https://www.threads.com/@chaesoul__"
+       target="_blank"
+       rel="noopener noreferrer">THREADS ↗</a>
   </section>
 
 </main>
