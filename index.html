@@ -19,9 +19,14 @@
       --white: #fffdfb;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
 
     body {
       margin: 0;
@@ -34,6 +39,10 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button, input, textarea {
+      font: inherit;
     }
 
     .topbar {
@@ -70,18 +79,24 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
-      padding: 13px 12px;
+      gap: 28px;
+      padding: 14px 12px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       font-size: 10px;
       letter-spacing: 1.5px;
     }
 
-    nav a:hover { color: var(--rose); }
+    nav a {
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
 
     .hero {
-      padding: 48px 18px 42px;
+      padding: 55px 18px 48px;
       text-align: center;
     }
 
@@ -109,10 +124,12 @@
       letter-spacing: 1px;
     }
 
-    .section { padding: 16px 20px 52px; }
+    .section {
+      padding: 20px 20px 55px;
+    }
 
     .section-heading {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
       text-align: center;
     }
 
@@ -131,6 +148,8 @@
       letter-spacing: 1.5px;
     }
 
+    /* 商品分類 */
+
     .categories {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -145,7 +164,7 @@
       overflow: hidden;
       background: var(--white);
       border: 1px solid #eee4df;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s, box-shadow .25s;
     }
 
     .category-card:hover {
@@ -154,6 +173,7 @@
     }
 
     /* 圖片輪播 */
+
     .carousel {
       position: relative;
       overflow: hidden;
@@ -200,11 +220,9 @@
       background: rgba(255,253,251,.82);
       color: #806969;
       font-size: 19px;
-      line-height: 1;
       cursor: pointer;
     }
 
-    .carousel-arrow:hover { background: white; }
     .carousel-arrow.prev { left: 7px; }
     .carousel-arrow.next { right: 7px; }
 
@@ -216,7 +234,6 @@
       z-index: 2;
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 6px;
     }
 
@@ -272,32 +289,167 @@
       letter-spacing: 1px;
     }
 
-    .shop-link:hover { background: var(--pink); }
+    .shop-link:hover {
+      background: var(--pink);
+    }
+
+    /* 品牌介紹 */
 
     .about {
-      padding: 33px 18px;
+      padding: 55px 20px;
       background: #f1e6e1;
       text-align: center;
     }
 
+    .about-content {
+      max-width: 680px;
+      margin: auto;
+    }
+
     .about h2 {
-      margin: 0 0 13px;
+      margin: 0 0 18px;
       font-family: Georgia, serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
       letter-spacing: 3px;
+    }
+
+    .about .about-lead {
+      margin: 0 0 17px;
+      color: #806969;
+      font-size: 15px;
+      letter-spacing: 2px;
     }
 
     .about p {
       margin: 0;
       color: #8f7e79;
       font-size: 11px;
-      line-height: 2.2;
+      line-height: 2.4;
+      letter-spacing: .5px;
     }
 
-    .social {
-      padding: 38px 18px 42px;
+    .about-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 650px;
+      margin: 35px auto 0;
+    }
+
+    .about-item {
+      padding: 20px 10px;
+      background: rgba(255,253,251,.55);
+    }
+
+    .about-item h3 {
+      margin: 0 0 9px;
+      color: #967171;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .about-item p {
+      font-size: 10px;
+      line-height: 1.9;
+    }
+
+    /* 聯絡我們 */
+
+    .contact {
+      padding: 55px 20px;
+    }
+
+    .contact-container {
+      max-width: 540px;
+      margin: auto;
+    }
+
+    .contact-intro {
+      margin: 0 0 25px;
+      color: var(--muted);
       text-align: center;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .contact-form {
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #806969;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e8dcd6;
+      border-radius: 0;
+      outline: none;
+      background: #fffdfb;
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #c8a5a3;
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .required {
+      color: #b47d7d;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #c8a5a3;
+      background: #ead1d1;
+      color: #765d5d;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .submit-button:hover {
+      background: #dfbfc0;
+    }
+
+    .contact-note {
+      margin-top: 17px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.8;
+    }
+
+    /* 社群 */
+
+    .social {
+      padding: 42px 18px 48px;
+      text-align: center;
+      background: #f7efeb;
     }
 
     .social p {
@@ -306,7 +458,6 @@
       line-height: 2;
     }
 
-    /* Instagram 與 Threads 共用按鈕風格 */
     .social-button {
       display: inline-block;
       margin: 9px 4px 0;
@@ -316,13 +467,15 @@
       font-family: Georgia, serif;
       font-size: 11px;
       letter-spacing: 1.5px;
-      transition: background .2s ease;
+      transition: background .2s;
     }
 
-    .social-button:hover { background: var(--pink); }
+    .social-button:hover {
+      background: var(--pink);
+    }
 
     footer {
-      padding: 20px 12px;
+      padding: 22px 12px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       text-align: center;
@@ -332,36 +485,60 @@
       line-height: 2.2;
     }
 
+    /* 手機版 */
+
     @media (max-width: 480px) {
-      header { padding: 25px 12px 20px; }
+      header {
+        padding: 25px 12px 20px;
+      }
 
       .logo {
         font-size: 32px;
         letter-spacing: 5px;
       }
 
-      nav { gap: 18px; }
-      .hero { padding: 39px 15px 34px; }
-      .section { padding: 12px 23px 42px; }
-      .categories { gap: 13px; }
+      nav {
+        gap: 16px;
+        font-size: 9px;
+      }
 
-      .category-info { padding: 14px 4px 16px; }
+      .hero {
+        padding: 39px 15px 34px;
+      }
+
+      .section {
+        padding: 12px 18px 42px;
+      }
+
+      .categories {
+        gap: 13px;
+      }
+
+      .category-info {
+        padding: 14px 4px 16px;
+      }
 
       .category-info h3 {
         font-size: 13px;
         letter-spacing: 1px;
       }
 
-      .category-info p { font-size: 9px; }
+      .category-info p {
+        font-size: 9px;
+      }
 
       .shop-link {
         padding: 7px 8px;
         font-size: 9px;
       }
 
-      .carousel-arrow {
-        width: 26px;
-        height: 26px;
+      .about-details {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-form {
+        padding: 20px 16px;
       }
 
       .social-button {
@@ -382,6 +559,7 @@
 </head>
 
 <body>
+
   <div class="topbar">
     DAILY OUTFITS · JEWELRY · YOUR OWN STYLE
   </div>
@@ -391,17 +569,21 @@
     <p class="tagline">WEAR YOUR SOUL</p>
   </header>
 
+  <!-- 導覽列 -->
   <nav>
     <a href="#home">HOME</a>
     <a href="#shop">SHOP</a>
     <a href="#about">ABOUT</a>
-    <a href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
+    <a href="#contact">CONTACT</a>
+    <a href="https://www.instagram.com/chaesoul__/"
        target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-    <a href="https://www.threads.com/@chaesoul.ag"
+    <a href="https://www.threads.com/@chaesoul__"
        target="_blank" rel="noopener noreferrer">THREADS ↗</a>
   </nav>
 
   <main>
+
+    <!-- 首頁 -->
     <section class="hero" id="home">
       <div class="hero-label">A LITTLE THING ABOUT YOU</div>
       <h2>穿上喜歡的，成為喜歡的自己。</h2>
@@ -411,6 +593,7 @@
       </p>
     </section>
 
+    <!-- 商品分類 -->
     <section class="section" id="shop">
       <div class="section-heading">
         <h2>SHOP BY CATEGORY</h2>
@@ -419,9 +602,9 @@
 
       <div class="categories">
 
-        <!-- 服飾輪播 -->
+        <!-- 服飾 -->
         <div class="category-card">
-          <div class="carousel" data-carousel aria-label="服飾商品圖片輪播">
+          <div class="carousel" data-carousel>
             <a class="carousel-link"
                href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
                target="_blank" rel="noopener noreferrer"
@@ -429,24 +612,26 @@
 
               <img class="carousel-image active"
                 src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
-                alt="日常服飾穿搭示意圖">
+                alt="日常服飾穿搭">
 
               <img class="carousel-image"
                 src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"
-                alt="女性日常穿搭示意圖"
+                alt="女性日常穿搭"
                 loading="lazy">
 
               <img class="carousel-image"
                 src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=85"
-                alt="時尚服裝示意圖"
+                alt="時尚服裝"
                 loading="lazy">
             </a>
 
             <button class="carousel-arrow prev" type="button"
               aria-label="上一張服飾圖片">‹</button>
+
             <button class="carousel-arrow next" type="button"
               aria-label="下一張服飾圖片">›</button>
-            <div class="carousel-dots" aria-label="選擇服飾圖片"></div>
+
+            <div class="carousel-dots"></div>
           </div>
 
           <div class="category-info">
@@ -455,13 +640,15 @@
             <p>日常服飾・情侶裝</p>
             <a class="shop-link"
               href="https://myship.7-11.com.tw/general/detail/GM2608184838597"
-              target="_blank" rel="noopener noreferrer">EXPLORE ↗</a>
+              target="_blank" rel="noopener noreferrer">
+              EXPLORE ↗
+            </a>
           </div>
         </div>
 
-        <!-- 飾品輪播 -->
+        <!-- 飾品 -->
         <div class="category-card">
-          <div class="carousel" data-carousel aria-label="飾品商品圖片輪播">
+          <div class="carousel" data-carousel>
             <a class="carousel-link"
                href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
                target="_blank" rel="noopener noreferrer"
@@ -469,24 +656,26 @@
 
               <img class="carousel-image active"
                 src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
-                alt="日常飾品示意圖">
+                alt="日常飾品">
 
               <img class="carousel-image"
                 src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85"
-                alt="金屬飾品示意圖"
+                alt="金屬飾品"
                 loading="lazy">
 
               <img class="carousel-image"
                 src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
-                alt="戒指飾品示意圖"
+                alt="戒指飾品"
                 loading="lazy">
             </a>
 
             <button class="carousel-arrow prev" type="button"
               aria-label="上一張飾品圖片">‹</button>
+
             <button class="carousel-arrow next" type="button"
               aria-label="下一張飾品圖片">›</button>
-            <div class="carousel-dots" aria-label="選擇飾品圖片"></div>
+
+            <div class="carousel-dots"></div>
           </div>
 
           <div class="category-info">
@@ -495,21 +684,146 @@
             <p>925 純銀・日常飾品</p>
             <a class="shop-link"
               href="https://myship.7-11.com.tw/general/detail/GM2605078930506"
-              target="_blank" rel="noopener noreferrer">EXPLORE ↗</a>
+              target="_blank" rel="noopener noreferrer">
+              EXPLORE ↗
+            </a>
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- 品牌介紹 -->
     <section class="about" id="about">
-      <h2>ABOUT CHAESOUL</h2>
-      <p>
-        把喜歡的穿搭留給日常，<br>
-        把每一份心動，變成生活裡的小小儀式。
-      </p>
+      <div class="about-content">
+        <div class="section-heading">
+          <h2>ABOUT CHAESOUL</h2>
+          <p>OUR BRAND STORY</p>
+        </div>
+
+        <p class="about-lead">
+          不必迎合別人的風格，穿出自己的樣子。
+        </p>
+
+        <p>
+          CHAESOUL 希望將喜歡的穿搭與飾品，帶進每個人的日常生活。<br>
+          我們挑選不同風格的服飾與飾品，<br>
+          讓每個人都能用簡單的方式，找到屬於自己的穿搭風格。<br>
+          <br>
+          我們重視商品品質、合理價格與每一次購物體驗，<br>
+          希望每一份選擇，都能成為生活裡的小小心動。
+        </p>
+      </div>
+
+      <div class="about-details">
+        <div class="about-item">
+          <h3>FASHION</h3>
+          <p>日常服飾<br>情侶穿搭</p>
+        </div>
+
+        <div class="about-item">
+          <h3>JEWELRY</h3>
+          <p>925 純銀<br>質感日常飾品</p>
+        </div>
+
+        <div class="about-item">
+          <h3>OUR VALUE</h3>
+          <p>合理價格<br>用心服務</p>
+        </div>
+      </div>
     </section>
 
+    <!-- 聯絡我們 -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+
+        <div class="section-heading">
+          <h2>CONTACT US</h2>
+          <p>WE WOULD LOVE TO HEAR FROM YOU</p>
+        </div>
+
+        <p class="contact-intro">
+          有任何商品、訂單或合作問題，<br>
+          歡迎填寫以下表單與我們聯絡。
+        </p>
+
+        <!-- FormSubmit 寄信表單 -->
+        <form class="contact-form"
+          action="https://formsubmit.co/doratsai0711@gmail.com"
+          method="POST">
+
+          <input type="hidden" name="_subject"
+            value="CHAESOUL 官網聯絡表單">
+
+          <input type="hidden" name="_template"
+            value="table">
+
+          <input type="hidden" name="_captcha"
+            value="true">
+
+          <div class="form-group">
+            <label for="name">
+              姓名 <span class="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="姓名"
+              placeholder="請輸入您的姓名"
+              autocomplete="name"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              聯絡電話 <span class="required">*</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="電話"
+              placeholder="請輸入聯絡電話"
+              autocomplete="tel"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              Email <span class="required">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="請輸入電子信箱"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              聯絡內容 <span class="required">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="聯絡內容"
+              placeholder="請輸入您想詢問的內容..."
+              required></textarea>
+          </div>
+
+          <button class="submit-button" type="submit">
+            SEND MESSAGE
+          </button>
+
+          <p class="contact-note">
+            * 為必填欄位。送出後請留意表單服務的驗證提示。
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- 社群連結 -->
     <section class="social">
       <div class="section-heading">
         <h2>FOLLOW OUR DAILY</h2>
@@ -519,17 +833,18 @@
       <p>追蹤我們，掌握新品與活動消息。</p>
 
       <a class="social-button"
-         href="https://www.instagram.com/chaesoul__?cplk=MnBjOWMzeGY5eXY%3D&utm_source=qr"
-         target="_blank" rel="noopener noreferrer">
+        href="https://www.instagram.com/chaesoul__/"
+        target="_blank" rel="noopener noreferrer">
         INSTAGRAM @CHAESOUL__ ↗
       </a>
 
       <a class="social-button"
-         href="https://www.threads.com/@chaesoul.ag"
-         target="_blank" rel="noopener noreferrer">
-        THREADS @CHAESOUL.AG ↗
+        href="https://www.threads.com/@chaesoul__"
+        target="_blank" rel="noopener noreferrer">
+        THREADS @CHAESOUL__ ↗
       </a>
     </section>
+
   </main>
 
   <footer>
@@ -537,31 +852,38 @@
     © 2026 CHAESOUL. ALL RIGHTS RESERVED.
   </footer>
 
+  <!-- 圖片輪播功能 -->
   <script>
     document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+
       const images = Array.from(
         carousel.querySelectorAll(".carousel-image")
       );
+
       const dotsContainer = carousel.querySelector(".carousel-dots");
       const prevButton = carousel.querySelector(".prev");
       const nextButton = carousel.querySelector(".next");
 
       let current = 0;
-      let timer;
+      let timer = null;
       let touchStartX = 0;
 
       // 建立圖片指示點
       const dots = images.map((_, index) => {
         const dot = document.createElement("button");
+
         dot.type = "button";
         dot.className = "carousel-dot";
-        dot.setAttribute("aria-label", `切換至第 ${index + 1} 張圖片`);
+        dot.setAttribute(
+          "aria-label",
+          `切換至第 ${index + 1} 張圖片`
+        );
 
         dot.addEventListener("click", (event) => {
           event.preventDefault();
           event.stopPropagation();
           showImage(index);
-          restartTimer();
+          startTimer();
         });
 
         dotsContainer.appendChild(dot);
@@ -569,6 +891,7 @@
       });
 
       function showImage(index) {
+
         current = (index + images.length) % images.length;
 
         images.forEach((image, i) => {
@@ -599,27 +922,24 @@
         }, 3000);
       }
 
-      function restartTimer() {
-        startTimer();
-      }
-
       prevButton.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
         showImage(current - 1);
-        restartTimer();
+        startTimer();
       });
 
       nextButton.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
         showImage(current + 1);
-        restartTimer();
+        startTimer();
       });
 
       carousel.addEventListener("mouseenter", stopTimer);
       carousel.addEventListener("mouseleave", startTimer);
 
+      // 手機左右滑動
       carousel.addEventListener("touchstart", (event) => {
         touchStartX = event.changedTouches[0].clientX;
       }, { passive: true });
@@ -630,13 +950,15 @@
 
         if (Math.abs(difference) > 40) {
           showImage(current + (difference < 0 ? 1 : -1));
-          restartTimer();
+          startTimer();
         }
       }, { passive: true });
 
       showImage(0);
       startTimer();
+
     });
   </script>
+
 </body>
 </html>
