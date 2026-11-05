@@ -1,0 +1,66 @@
+:root{--bg:#fbf6f2;--pink:#ead1d1;--rose:#a77e80;--text:#514544;--muted:#a39591;--line:#e9dfd9;--white:#fffdfb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.topbar{padding:9px 12px;background:#eee0db;color:#806969;text-align:center;font-size:10px;letter-spacing:2px}
+header{padding:29px 16px 24px;text-align:center}
+.logo{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:38px;font-weight:400;letter-spacing:6px}
+.tagline{margin:8px 0 0;color:var(--muted);font-family:Georgia,serif;font-size:10px;letter-spacing:4px}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:25px;padding:14px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1.5px}
+nav a{transition:color .2s}nav a:hover,nav a[aria-current="page"]{color:var(--rose)}
+.hero{padding:65px 18px 58px;text-align:center}
+.hero-label{color:var(--rose);font-family:Georgia,serif;font-size:10px;letter-spacing:4px}
+.hero h2{margin:15px 0 12px;font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(23px,5vw,32px);font-weight:400;letter-spacing:3px;line-height:1.6}
+.hero p{margin:0;color:#998985;font-size:11px;line-height:2.2;letter-spacing:1px}
+.section{padding:30px 20px 60px}
+.section-heading{margin-bottom:28px;text-align:center}
+.section-heading h2{margin:0;font-family:Georgia,serif;font-size:19px;font-weight:400;letter-spacing:3px}
+.section-heading p{margin:8px 0 0;color:var(--muted);font-size:10px;letter-spacing:1.5px}
+.categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;max-width:760px;margin:0 auto}
+.category-card{min-width:0;overflow:hidden;background:var(--white);border:1px solid #eee4df;transition:transform .25s,box-shadow .25s}
+.category-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px #9669781a}
+.carousel{position:relative;overflow:hidden;background:#f0e4df;touch-action:pan-y}
+.carousel-link{display:block;width:100%}
+.carousel-image{display:none;width:100%;aspect-ratio:4/4.8;object-fit:cover;background:#f0e4df}
+.carousel-image.active{display:block;animation:fadeIn .45s ease}
+@keyframes fadeIn{from{opacity:.55}to{opacity:1}}
+.carousel-arrow{position:absolute;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;transform:translateY(-50%);border:1px solid #ffffffbf;border-radius:50%;background:#fffdfbd1;color:#806969;font-size:19px;cursor:pointer}
+.carousel-arrow.prev{left:8px}.carousel-arrow.next{right:8px}
+.carousel-dots{position:absolute;bottom:10px;left:0;right:0;z-index:2;display:flex;justify-content:center;gap:6px}
+.carousel-dot{width:6px;height:6px;padding:0;border:0;border-radius:50%;background:#ffffffa6;cursor:pointer}
+.carousel-dot.active{width:16px;border-radius:6px;background:white}
+.category-info{padding:18px 10px 21px;text-align:center}
+.category-number{color:var(--rose);font-family:Georgia,serif;font-size:9px;letter-spacing:2px}
+.category-info h3{margin:9px 0 7px;font-size:15px;font-weight:400;letter-spacing:2px}
+.category-info p{margin:0;color:var(--muted);font-size:10px;line-height:1.8}
+.shop-link,.outline-link{display:inline-block;margin-top:14px;padding:9px 16px;border:1px solid #ddc3c1;color:#967171;font-size:10px;letter-spacing:1px;transition:background .2s}
+.shop-link:hover,.outline-link:hover{background:var(--pink)}
+.about,.soft-section{padding:58px 20px;background:#f1e6e1;text-align:center}
+.about-content{max-width:680px;margin:auto}
+.about h2{margin:0 0 18px;font-family:Georgia,serif;font-size:20px;font-weight:400;letter-spacing:3px}
+.about .about-lead{margin:0 0 17px;color:#806969;font-size:15px;letter-spacing:2px}
+.about p{margin:0;color:#8f7e79;font-size:11px;line-height:2.4;letter-spacing:.5px}
+.about-details{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:650px;margin:35px auto 0}
+.about-item{padding:20px 10px;background:#fffdfb8c}
+.about-item h3{margin:0 0 9px;color:#967171;font-family:Georgia,serif;font-size:13px;font-weight:400;letter-spacing:1px}
+.about-item p{font-size:10px;line-height:1.9}
+.contact-wrap{max-width:700px;margin:0 auto;text-align:center}
+.contact-intro{color:var(--muted);font-size:12px;line-height:2}
+.line-card{max-width:490px;margin:30px auto 0;padding:38px 24px;background:var(--white);border:1px solid var(--line)}
+.line-mark{width:62px;height:62px;margin:0 auto 18px;display:grid;place-items:center;border-radius:18px;background:#06c755;color:white;font-weight:700;font-size:24px}
+.line-card h3{margin:0 0 10px;font-size:16px;font-weight:400;letter-spacing:2px}
+.line-card p{margin:0;color:var(--muted);font-size:11px;line-height:2}
+.line-button{display:inline-block;margin-top:22px;padding:14px 30px;background:#06c755;color:white;font-size:12px;letter-spacing:1px;transition:opacity .2s}
+.line-button:hover{opacity:.85}
+.line-note{margin-top:18px;color:var(--muted);font-size:10px;line-height:1.8}
+.social{padding:45px 18px 50px;text-align:center;background:#f7efeb}
+.social p{color:var(--muted);font-size:11px;line-height:2}
+.social-button{display:inline-block;margin:9px 4px 0;padding:11px 20px;border:1px solid #c8a5a3;color:#896868;font-family:Georgia,serif;font-size:11px;letter-spacing:1px;transition:background .2s}
+.social-button:hover{background:var(--pink)}
+.page-intro{padding:50px 18px 28px;text-align:center}
+.page-intro h2{margin:0;font-family:Georgia,serif;font-size:24px;font-weight:400;letter-spacing:3px}
+.page-intro p{margin:10px 0 0;color:var(--muted);font-size:11px;letter-spacing:1px}
+footer{padding:22px 12px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-family:Georgia,serif;font-size:10px;letter-spacing:1.5px;line-height:2.2}
+@media(max-width:560px){header{padding:25px 12px 20px}.logo{font-size:32px;letter-spacing:5px}nav{gap:13px;font-size:9px}.hero{padding:43px 15px 38px}.section{padding:20px 16px 45px}.categories{gap:12px}.category-info{padding:14px 5px 16px}.category-info h3{font-size:13px;letter-spacing:1px}.category-info p{font-size:9px}.shop-link{padding:8px 9px;font-size:9px}.about-details{grid-template-columns:1fr;gap:10px}.line-card{padding:30px 18px}.social-button{padding:10px 13px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
