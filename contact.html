@@ -1,18 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#fbf6f2">
-  <meta name="description" content="CHAESOUL SELECT｜常見問題與官方 LINE 客服。">
-  <title>常見問題與聯絡我們 | CHAESOUL</title>
+  <meta name="description" content="CHAESOUL｜Wear Your Soul。日常服飾、情侶穿搭與質感飾品。">
+  <title>聯絡官方 LINE｜CHAESOUL</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
     .faq-section {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 55px 20px 75px;
+      padding: 55px 22px 75px;
     }
 
     .faq-heading {
@@ -21,34 +22,37 @@
     }
 
     .faq-heading h2 {
-      font-family: Georgia, serif;
       font-size: 25px;
-      letter-spacing: 3px;
-      color: #806969;
-      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
     }
 
     .faq-heading p {
-      color: #a39591;
-      font-size: 12px;
+      color: #8d8179;
+      font-size: 13px;
       letter-spacing: 1px;
     }
 
+    .faq-category {
+      margin: 30px 0 14px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: #8b7168;
+    }
+
     .faq-item {
-      border-bottom: 1px solid #e9dfd9;
-      padding: 18px 5px;
+      border-bottom: 1px solid #eadfd8;
+      padding: 0;
     }
 
     .faq-item summary {
-      cursor: pointer;
       list-style: none;
-      color: #665454;
-      font-size: 14px;
-      font-weight: 500;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
+      cursor: pointer;
+      padding: 19px 38px 19px 4px;
+      font-size: 15px;
+      color: #514640;
+      position: relative;
+      line-height: 1.7;
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -57,9 +61,11 @@
 
     .faq-item summary::after {
       content: "+";
-      font-size: 20px;
-      color: #b58f90;
-      flex-shrink: 0;
+      position: absolute;
+      right: 8px;
+      top: 17px;
+      font-size: 21px;
+      color: #a78d80;
     }
 
     .faq-item[open] summary::after {
@@ -67,43 +73,79 @@
     }
 
     .faq-answer {
-      padding: 15px 25px 3px 0;
-      color: #938581;
-      font-size: 13px;
+      padding: 0 8px 22px;
+      color: #766b64;
+      font-size: 14px;
       line-height: 2;
     }
 
+    .faq-answer ol,
+    .faq-answer ul {
+      padding-left: 22px;
+      margin: 8px 0;
+    }
+
+    .faq-answer li {
+      margin-bottom: 7px;
+    }
+
+    .faq-answer strong {
+      color: #594b43;
+    }
+
     .faq-answer a {
-      color: #a77e80;
+      color: #9b786a;
       text-decoration: underline;
     }
 
-    .faq-contact {
-      margin-top: 38px;
-      padding: 28px 20px;
-      background: #f7efeb;
-      text-align: center;
+    .faq-note {
+      background: #f8f1ec;
+      border-radius: 8px;
+      padding: 13px 16px;
+      margin-top: 12px;
+      font-size: 13px;
     }
 
-    .faq-contact h3 {
-      color: #806969;
-      font-size: 16px;
-      font-weight: normal;
-      letter-spacing: 1px;
+    .faq-contact {
+      text-align: center;
+      margin-top: 40px;
+      padding: 28px 18px;
+      background: #f8f1ec;
+      border-radius: 12px;
     }
 
     .faq-contact p {
-      color: #a39591;
-      font-size: 12px;
-      line-height: 1.9;
+      color: #766b64;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 16px;
     }
 
-    @media (max-width: 480px) {
+    .faq-contact a {
+      display: inline-block;
+      padding: 11px 27px;
+      border-radius: 30px;
+      background: #b99b8c;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
       .faq-section {
         padding: 40px 18px 55px;
       }
 
+      .faq-heading h2 {
+        font-size: 22px;
+      }
+
       .faq-item summary {
+        font-size: 14px;
+      }
+
+      .faq-answer {
         font-size: 13px;
       }
     }
@@ -112,153 +154,339 @@
 
 <body>
 
-<div class="topbar">DAILY OUTFITS · JEWELRY · YOUR OWN STYLE</div>
+  <div class="topbar">
+    DAILY OUTFITS · JEWELRY · YOUR OWN STYLE
+  </div>
 
-<header>
-  <h1 class="logo"><a href="index.html">CHAESOUL</a></h1>
-  <p class="tagline">WEAR YOUR SOUL</p>
-</header>
+  <header>
+    <h1 class="logo">
+      <a href="index.html">CHAESOUL</a>
+    </h1>
+    <p class="tagline">WEAR YOUR SOUL</p>
+  </header>
 
-<nav>
-  <a href="index.html">HOME</a>
-  <a href="shop.html">SHOP</a>
-  <a href="about.html">ABOUT</a>
-  <a href="contact.html" aria-current="page">CONTACT LINE</a>
-  <a href="https://www.instagram.com/chaesoul__/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-  <a href="https://www.threads.com/@chaesoul__" target="_blank" rel="noopener noreferrer">THREADS ↗</a>
-</nav>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html" aria-current="page">CONTACT LINE</a>
+    <a href="https://www.instagram.com/chaesoul__/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+    <a href="https://www.threads.com/@chaesoul__" target="_blank" rel="noopener noreferrer">THREADS ↗</a>
+  </nav>
 
-<main>
+  <main>
 
-  <section class="page-intro">
-    <h2>CONTACT & FAQ</h2>
-    <p>WE ARE HERE TO HELP YOU</p>
-  </section>
+    <!-- 官方 LINE -->
+    <section class="page-intro">
+      <h2>CONTACT LINE</h2>
+      <p>LET'S TALK WITH CHAESOUL</p>
+    </section>
 
-  <!-- 官方 LINE -->
-  <section class="section">
-    <div class="contact-wrap">
-      <p class="contact-intro">
-        有任何商品、訂單、尺寸或代購問題，<br>
-        歡迎加入 CHAESOUL 官方 LINE 與我們聯絡。<br>
-        讓我們協助你找到喜歡的商品。
-      </p>
+    <section class="section">
+      <div class="contact-wrap">
 
-      <div class="line-card">
-        <div class="line-mark">LINE</div>
-        <h3>CHAESOUL SELECT</h3>
-        <p>商品詢問・訂單問題・海外代購</p>
-        <a class="line-button"
-           href="https://lin.ee/R7tp9XY"
+        <p class="contact-intro">
+          有任何商品、訂單、尺寸或代購問題，<br>
+          歡迎加入 CHAESOUL 官方 LINE 與我們聯絡。<br>
+          客服將透過官方帳號協助你。
+        </p>
+
+        <div class="line-card">
+          <div class="line-mark">LINE</div>
+          <h3>CHAESOUL SELECT</h3>
+          <p>加入官方 LINE，詢問商品資訊、訂單進度及購買相關問題。</p>
+
+          <a class="line-button"
+             href="https://lin.ee/R7tp9XY"
+             target="_blank"
+             rel="noopener noreferrer">
+            加入官方 LINE ↗
+          </a>
+
+          <p class="line-note">
+            點擊按鈕後將開啟 LINE 加好友頁面。<br>
+            若無法開啟，請使用 LINE 搜尋官方帳號。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 常見問題 -->
+    <section class="faq-section">
+
+      <div class="faq-heading">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <p>購買前先看看常見問題 ♡</p>
+      </div>
+
+      <!-- 商品與尺寸 -->
+      <h3 class="faq-category">01 / PRODUCT 商品與尺寸</h3>
+
+      <details class="faq-item">
+        <summary>商品都是現貨嗎？</summary>
+        <div class="faq-answer">
+          商品依賣場標示為主。現貨商品會盡快安排出貨；
+          若為追加或預購商品，則需等待商品到貨後安排寄出。
+          如不確定商品狀態，歡迎先透過官方 LINE 詢問。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>商品尺寸要怎麼選擇？</summary>
+        <div class="faq-answer">
+          每款商品的版型及尺寸可能不同，建議先參考商品頁面的尺寸資訊。
+          若對尺寸有疑問，可以提供身高、體重及平常穿著尺寸，
+          由客服協助評估。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>商品照片會有色差嗎？</summary>
+        <div class="faq-answer">
+          商品照片會因拍攝光線、螢幕顯示及個人裝置不同，
+          可能產生些微色差，實際顏色仍以收到的商品為準。
+        </div>
+      </details>
+
+      <!-- 訂購與付款 -->
+      <h3 class="faq-category">02 / ORDER 訂購與付款</h3>
+
+      <details class="faq-item">
+        <summary>目前提供哪些付款方式？</summary>
+        <div class="faq-answer">
+          目前提供以下兩種付款方式：
+
+          <ol>
+            <li>
+              <strong>7-11 賣貨便：</strong>
+              下單時選擇貨到付款，收到包裹後再付款取貨，
+              運費 NT$38。
+            </li>
+            <li>
+              <strong>先轉帳：</strong>
+              完成商品款項匯款後，由我們確認款項，
+              再使用 7-11 交貨便安排寄出，運費 NT$60。
+            </li>
+          </ol>
+
+          如需確認轉帳資訊，請透過官方 LINE 聯繫客服。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>可以合併服飾與飾品訂單嗎？</summary>
+        <div class="faq-answer">
+          服飾及飾品目前為不同賣場。
+          若分別在兩個賣場下單，請私訊官方 LINE 告知客服，
+          我們會協助確認訂單及合併寄送方式。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>下單後可以取消或修改訂單嗎？</summary>
+        <div class="faq-answer">
+          若尚未安排出貨，請盡快聯繫客服協助確認。
+          若商品已出貨，則需依實際物流狀態及相關法令處理。
+        </div>
+      </details>
+
+      <!-- 出貨與取貨 -->
+      <h3 class="faq-category">03 / SHIPPING 出貨與取貨</h3>
+
+      <details class="faq-item">
+        <summary>下單後多久會出貨？</summary>
+        <div class="faq-answer">
+          <ol>
+            <li><strong>現貨商品：</strong>原則上會盡快安排出貨。</li>
+            <li><strong>追加／預購商品：</strong>約需 10–15 個工作天，不含例假日及國定假日，實際到貨時間依供應商及物流狀況為準。</li>
+          </ol>
+          若訂單包含現貨及預購商品，出貨時間請以客服確認結果為準。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>可以查詢訂單或物流進度嗎？</summary>
+        <div class="faq-answer">
+          可以！可以透過賣貨便訂單頁面查詢物流狀態，
+          也可以加入官方 LINE，提供訂單資訊由客服協助確認。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>如果忘記取貨，包裹被退回怎麼辦？</summary>
+        <div class="faq-answer">
+          若包裹因未取貨而退回，請先聯繫客服確認商品及物流狀態。
+          若需重新寄送，需由買家先支付商品款項及重新寄送運費
+          NT$60，確認款項後再安排補寄。
+          <div class="faq-note">
+            範例：商品 NT$649＋補寄運費 NT$60＝NT$709。
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>海外代購商品多久會到貨？</summary>
+        <div class="faq-answer">
+          海外代購商品依每次海外代購行程及供應商出貨狀況安排，
+          到貨時間可能有所不同。
+          若有預計出貨或到貨時間，客服會再協助告知。
+        </div>
+      </details>
+
+      <!-- 退換貨政策 -->
+      <h3 class="faq-category">04 / RETURN 退換貨與退款</h3>
+
+      <details class="faq-item">
+        <summary>網路購物有七日鑑賞期嗎？</summary>
+        <div class="faq-answer">
+          依《消費者保護法》第 19 條規定，
+          通訊交易消費者原則上自收受商品後享有七日解除契約權利，
+          無須說明理由。
+
+          <ol>
+            <li>七日期間自收到商品的次日起算。</li>
+            <li>七日鑑賞期是提供消費者檢查商品的猶豫期間，並非試用期。</li>
+            <li>如需辦理退貨，請於法定期間內透過官方 LINE 聯繫客服，並提供訂單資訊。</li>
+            <li>預購商品不因等待追加或尚未到貨而當然排除法定退貨權利。</li>
+          </ol>
+
+          實際退貨權利及處理方式，仍依相關法令規定辦理。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>個人衛生用品與貼身衣物可以退貨嗎？</summary>
+        <div class="faq-answer">
+          依《消費者保護法》第 19 條及
+          《通訊交易解除權合理例外情事適用準則》規定，
+          已拆封之個人衛生用品，且符合相關法定要件並經本店於交易前明確告知者，
+          得排除七日解除契約權之適用。
+
+          <ol>
+            <li>
+              個人衛生用品是否適用退貨例外，須依商品實際性質、
+              衛生特性及拆封情形個別判斷。
+            </li>
+            <li>
+              內衣、內褲、襪類、Bra Top、背心及其他貼身服飾，
+              不會僅因商品屬於貼身衣物，就一律認定為不可退貨商品。
+            </li>
+            <li>
+              若商品依法符合已拆封個人衛生用品的合理例外，
+              且本店已於購買前明確告知該商品不適用七日解除契約權，
+              商品拆封後即不適用該項解除權。
+            </li>
+            <li>
+              若商品不符合上述法定例外，消費者仍依法享有七日解除契約權。
+            </li>
+            <li>
+              商品有瑕疵、寄錯商品或其他依法應由本店負責的情形，
+              仍依相關法令及個案情況處理。
+            </li>
+          </ol>
+
+          <div class="faq-note">
+            提醒：並非所有貼身衣物都屬於法定退貨例外商品，
+            實際仍須依商品性質及相關法令認定。
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>如果收到瑕疵品或寄錯商品怎麼辦？</summary>
+        <div class="faq-answer">
+          若收到商品有瑕疵或與訂購內容不符，
+          請透過官方 LINE 聯繫客服，並提供訂單資訊及商品照片，
+          我們會協助確認並依相關法令處理。
+          因商品瑕疵或本店出貨錯誤所產生的必要處理費用，
+          由本店依法負擔。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>如果是尺寸不合或個人因素想換貨呢？</summary>
+        <div class="faq-answer">
+          若希望更換尺寸或款式，請先聯繫客服確認商品庫存及換貨方式。
+          若屬於個人因素且非商品瑕疵，換貨所需的寄送費用由買家負擔。
+          若涉及法定七日解除契約權，則依相關法令辦理。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>換貨需要等多久？</summary>
+        <div class="faq-answer">
+          <ol>
+            <li>有現貨的換貨商品，確認後原則上於 48 小時內安排寄出，不含例假日。</li>
+            <li>若需追加商品，約需 10–15 個工作天，不含例假日及國定假日，實際時間依供應商狀況為準。</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>退貨退款大約需要多久？</summary>
+        <div class="faq-answer">
+          收到退回商品並完成確認後，退款原則上約需 5–7 個工作天處理。
+          實際入帳時間仍依銀行或金流作業時間為準。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>退貨需要保留吊牌或原包裝嗎？</summary>
+        <div class="faq-answer">
+          建議保留商品原有配件、贈品及包裝，以利確認商品狀態。
+          商品退回後，仍會依商品實際狀態及相關法令判斷退貨事宜；
+          不會僅因缺少吊牌或包裝，就一律排除依法享有的退貨權利。
+        </div>
+      </details>
+
+      <!-- 聯絡客服 -->
+      <div class="faq-contact">
+        <p>
+          還有其他問題嗎？<br>
+          歡迎加入官方 LINE，讓 CHAESOUL 為你服務。
+        </p>
+        <a href="https://lin.ee/R7tp9XY"
            target="_blank"
            rel="noopener noreferrer">
-          加入官方 LINE ↗
+          CONTACT US ↗
         </a>
-        <p class="line-note">
-          點擊按鈕即可加入官方帳號。
-        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- 常見問題 -->
-  <section class="faq-section">
+    </section>
 
-    <div class="faq-heading">
-      <h2>FREQUENTLY ASKED QUESTIONS</h2>
-      <p>購買前先看看這裡，快速找到你需要的答案。</p>
-    </div>
-
-    <details class="faq-item">
-      <summary>Q1. 商品有現貨嗎？多久可以出貨？</summary>
-      <div class="faq-answer">
-        現貨商品會盡快安排出貨；非現貨及預購商品約需
-        10–15 天（不含例假日），實際時間依商品供貨狀況為準。
+    <!-- 社群連結 -->
+    <section class="social">
+      <div class="section-heading">
+        <h2>FOLLOW OUR DAILY</h2>
+        <p>NEW ARRIVALS · DAILY LOOKS · EVENTS</p>
       </div>
-    </details>
 
-    <details class="faq-item">
-      <summary>Q2. 可以詢問商品尺寸嗎？</summary>
-      <div class="faq-answer">
-        當然可以！如果不確定尺寸，歡迎加入官方 LINE，
-        提供想詢問的商品及平常穿著尺寸，我們會協助你確認。
+      <p>追蹤我們，掌握新品與活動消息。</p>
+
+      <div class="social-buttons">
+        <a class="social-button"
+           href="https://www.instagram.com/chaesoul__/"
+           target="_blank"
+           rel="noopener noreferrer">
+          @CHAESOUL__ · INSTAGRAM ↗
+        </a>
+
+        <a class="social-button"
+           href="https://www.threads.com/@chaesoul__"
+           target="_blank"
+           rel="noopener noreferrer">
+          @CHAESOUL__ · THREADS ↗
+        </a>
       </div>
-    </details>
+    </section>
 
-    <details class="faq-item">
-      <summary>Q3. 海外代購商品多久會到貨？</summary>
-      <div class="faq-answer">
-        海外代購商品會依每次海外代購行程安排採購及寄送，
-        因此到貨時間可能有所不同。實際進度請以官方 LINE 公告或客服回覆為準。
-      </div>
-    </details>
+  </main>
 
-    <details class="faq-item">
-      <summary>Q4. 如果忘記取貨，包裹被退回怎麼辦？</summary>
-      <div class="faq-answer">
-        如果包裹未能順利取貨，請先透過官方 LINE 聯繫我們。
-        若包裹已退回並需要重新寄送，需另行支付補寄運費
-        NT$60，並於補寄前完成款項確認。
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Q5. 可以在哪裡查看商品及下單？</summary>
-      <div class="faq-answer">
-        目前分為服飾及飾品兩個賣場，可以從網站 SHOP 頁面
-        前往選購，也可以透過官方 LINE 詢問商品資訊。
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Q6. 收到商品有問題，該怎麼處理？</summary>
-      <div class="faq-answer">
-        若收到商品後發現有瑕疵或商品寄送錯誤，
-        請先保留商品及包裝，並透過官方 LINE 聯繫我們，
-        提供訂單資訊及商品照片，以便協助確認。
-      </div>
-    </details>
-
-    <div class="faq-contact">
-      <h3>STILL HAVE QUESTIONS?</h3>
-      <p>
-        沒有找到想要的答案嗎？<br>
-        歡迎直接聯繫 CHAESOUL SELECT。
-      </p>
-      <a class="line-button"
-         href="https://lin.ee/R7tp9XY"
-         target="_blank"
-         rel="noopener noreferrer">
-        前往官方 LINE ↗
-      </a>
-    </div>
-
-  </section>
-
-  <!-- 社群 -->
-  <section class="social">
-    <div class="section-heading">
-      <h2>FOLLOW OUR DAILY</h2>
-      <p>NEW ARRIVALS · DAILY LOOKS · EVENTS</p>
-    </div>
-
-    <a class="social-button"
-       href="https://www.instagram.com/chaesoul__/"
-       target="_blank"
-       rel="noopener noreferrer">INSTAGRAM ↗</a>
-
-    <a class="social-button"
-       href="https://www.threads.com/@chaesoul__"
-       target="_blank"
-       rel="noopener noreferrer">THREADS ↗</a>
-  </section>
-
-</main>
-
-<footer>
-  CHAESOUL · WEAR YOUR SOUL<br>
-  © 2026 CHAESOUL. ALL RIGHTS RESERVED.
-</footer>
+  <footer>
+    CHAESOUL · WEAR YOUR SOUL<br>
+    © 2026 CHAESOUL. ALL RIGHTS RESERVED.
+  </footer>
 
 </body>
 </html>
